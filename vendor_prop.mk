@@ -139,10 +139,6 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.vendor.data.iwlan.enable=true \
     ro.telephony.iwlan_operation_mode=legacy
-
-# Perf
-PRODUCT_PROPERTY_OVERRIDES +=  \
-    ro.vendor.extension_library=libqti-perfd-client.so
     
 # Surfaceflinger properties    
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
