@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
     libnetfilter_conntrack \
     libnfnetlink
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.RMX1921
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
