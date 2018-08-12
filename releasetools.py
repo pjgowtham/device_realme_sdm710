@@ -47,3 +47,13 @@ def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   return
+  
+def AddTrustZoneAssertion(info, input_zip):
+  android_info = info.input_zip.read("OTA/android-info.txt")
+  m = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
+  if m:
+    versions = m.group(1).split('|')
+    if len(versions) and '*' not in versions:
+      cmd = 'assert(RMX1921.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 10 based Realme UI build. Please upgrade firmware and retry!"););'
+      info.script.AppendExtra(cmd)
+  return
