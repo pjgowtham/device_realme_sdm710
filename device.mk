@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
-    RealmeCameraHelper
+    RealmeCameraHelper \
+    lineage.camera.motor@1.0-service.RMX1901
     
 # Context Hub
 PRODUCT_PACKAGES += \
