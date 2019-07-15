@@ -95,6 +95,10 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 PRODUCT_PRODUCT_PROPERTIES += \
    persist.camera.HAL3.enabled=1
    
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+   ro.charger.enable_suspend=true
+
 # Codec2
 PRODUCT_PROPERTY_OVERRIDES +=  \
    debug.stagefright.omx_default_rank.sw-audio=1 \
