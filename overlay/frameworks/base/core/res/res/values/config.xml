@@ -219,6 +219,9 @@
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
     
     <integer-array name="config_availableColorModes">
         <item>0</item>
@@ -538,4 +541,5 @@
 
     <!-- Cleanup unused fingerprints -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
+
 </resources>
