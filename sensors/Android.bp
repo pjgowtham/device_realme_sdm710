@@ -1,0 +1,21 @@
+cc_library_shared {
+    name: "android.hardware.sensors@1.0-impl.RMX1921",
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: ["Sensors.cpp"],
+    proprietary: true,
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libhardware",
+        "libbase",
+        "libutils",
+        "libhidlbase",
+        "libhidltransport",
+        "android.hardware.sensors@1.0",
+    ],
+    static_libs: [
+        "android.hardware.sensors@1.0-convert",
+        "multihal",
+    ],
+}
