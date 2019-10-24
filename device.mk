@@ -153,6 +153,9 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     Snap
 
+PRODUCT_PACKAGES += \
+    RealmeCameraHelper
+    
 # Context Hub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
