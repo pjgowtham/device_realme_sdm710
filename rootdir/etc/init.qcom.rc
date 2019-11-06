@@ -1,1 +1,4 @@
 import /system/etc/init/init.devicesetting.rc
+
+service cvphalservice /system/bin/true
+    disabled
