@@ -4,3 +4,5 @@ allow hal_audio_default diag_device:chr_file { read write };
 
 get_prop(hal_audio_default, vendor_mpctl_prop);
 get_prop(hal_audio_default, oppo_debug_prop);
+
+dontaudit hal_audio_default sysfs:dir read;
