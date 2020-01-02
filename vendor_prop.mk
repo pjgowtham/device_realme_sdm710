@@ -135,6 +135,10 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
+# Network manager
+PRODUCT_PROPERTY_OVERRIDES +=  \
+    persist.vendor.data.iwlan.enable=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.extension_library=libqti-perfd-client.so
