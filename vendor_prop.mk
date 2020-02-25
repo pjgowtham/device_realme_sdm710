@@ -156,6 +156,10 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.hardware.nfc_nci=nqx.default
 
+# Perf
+PRODUCT_PROPERTY_OVERRIDES +=  \
+    ro.vendor.extension_library=libqti-perfd-client.so
+
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES +=  \
     debug.sf.hw=0 \
