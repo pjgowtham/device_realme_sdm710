@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.qti.hardware.display.allocator@1.0-service
 
+# Doze
+PRODUCT_PACKAGES += \
+    RealmeParts
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
