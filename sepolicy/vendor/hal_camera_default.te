@@ -3,6 +3,7 @@ allow hal_camera_default persist_camera_file:dir { write search };
 
 allow hal_camera_default proc:file { read write open };
 allow hal_camera_default proc_oppoversion:dir { search };
+allow hal_camera_default proc:file rw_file_perms;
 
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
