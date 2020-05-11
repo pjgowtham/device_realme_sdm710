@@ -85,6 +85,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener \
     tinymix
 
 # Camera
@@ -104,7 +110,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    libvulkan
+    libtinyxml \
+    libvulkan \
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -123,6 +130,11 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
+
+# IPA
+PRODUCT_PACKAGES += \
+    libnetfilter_conntrack \
+    libnfnetlink
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -154,6 +166,11 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Radio
+PRODUCT_PACKAGES += \
+    libjson \
+    librmnetctl
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -181,7 +198,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
 
 # Telephony
 PRODUCT_PACKAGES += \
