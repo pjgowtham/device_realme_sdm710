@@ -102,3 +102,6 @@ persist.sys.oppo.proximity=true
 # Thermal
 persist.sys.enable.oscar=0
 persist.sys.oscar.dc=1
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
