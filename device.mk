@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.sdm710 \
     memtrack.sdm710 \
-    hwcomposer.sdm710 \
     libtinyxml \
     libvulkan \
     vendor.qti.hardware.display.allocator@1.0-service
