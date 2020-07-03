@@ -22,6 +22,11 @@
 #include <fstream>
 #include <cmath>
 
+/* Hardcoded stuffs */
+#define X_POS 445
+#define Y_POS 1967
+#define FP_SIZE 196
+
 namespace {
 
 template <typename T>
@@ -54,15 +59,15 @@ FingerprintInscreen::FingerprintInscreen() {
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
-    return FOD_POS_X;
+    return X_POS;
 }
 
 Return<int32_t> FingerprintInscreen::getPositionY() {
-    return FOD_POS_Y;
+    return Y_POS;
 }
 
 Return<int32_t> FingerprintInscreen::getSize() {
-    return FOD_SIZE;
+    return FP_SIZE;
 }
 
 Return<void> FingerprintInscreen::onStartEnroll() {
