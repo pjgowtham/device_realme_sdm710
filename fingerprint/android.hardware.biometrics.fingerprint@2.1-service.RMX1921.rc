@@ -1,3 +1,4 @@
+on boot
     # Goodix FP
     chown system system /dev/goodix_fp
 
