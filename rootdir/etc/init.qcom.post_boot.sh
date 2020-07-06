@@ -573,21 +573,55 @@ function configure_zram_parameters() {
         echo lz4 > /sys/block/zram0/comp_algorithm
     fi
 
+#ifdef VENDOR_EDIT
+#//Huacai.Zhou@PSW.Kernel.mm,2018-12-06, Modify for config zramsize according to ramsize
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
             echo 1 > /sys/block/zram0/use_dedup
         fi
-        echo $zRamSizeBytes > /sys/block/zram0/disksize
-
-        # ZRAM may use more memory than it saves if SLAB_STORE_USER
-        # debug option is enabled.
-        if [ -e /sys/kernel/slab/zs_handle ]; then
-            echo 0 > /sys/kernel/slab/zs_handle/store_user
+        if [ $MemTotal -le 524288 ]; then
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 402653184 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
+        elif [ $MemTotal -le 1048576 ] && [ "$low_ram" == "true" ]; then
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 805306368 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
+        elif [ $MemTotal -le 2097152 ]; then
+            #config 1GB+256M zram size with memory 2 GB
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 1342177280 > /sys/block/zram0/disksize
+            echo 180 > /proc/sys/vm/swappiness
+            echo 40 > /proc/sys/vm/direct_swappiness
+        elif [ $MemTotal -le 3145728 ]; then
+            #config 1GB +512M+256M zram size with memory 3 GB
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 1879048192 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
+        elif [ $MemTotal -le 4194304 ]; then
+            #config 2GB+512MB zram size with memory 4 GB
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 2684354560 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
+        elif [ $MemTotal -le 6291456 ]; then
+            #config 2GB+512M zram size with memory 6 GB
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 2684354560 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
+        else
+            #Kui.Zhang@PSW.Kernel.Performance, 2019/02/18
+            #config 2GB+192M zram size with memory 8 GB
+            echo lz4 > /sys/block/zram0/comp_algorithm
+            echo 2348810240 > /sys/block/zram0/disksize
+            echo 160 > /proc/sys/vm/swappiness
+            echo 60 > /proc/sys/vm/direct_swappiness
         fi
-        if [ -e /sys/kernel/slab/zspage ]; then
-            echo 0 > /sys/kernel/slab/zspage/store_user
-        fi
-
+#endif /*VENDOR_EDIT*/
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
     fi
@@ -801,11 +835,11 @@ function enable_memory_features()
 
 function start_hbtp()
 {
-        # Start the Host based Touch processing but not in the power off mode.
-        bootmode=`getprop ro.bootmode`
-        if [ "charger" != $bootmode ]; then
-                start vendor.hbtp
-        fi
+#        # Start the Host based Touch processing but not in the power off mode.
+#        bootmode=`getprop ro.bootmode`
+#        if [ "charger" != $bootmode ]; then
+#                start vendor.hbtp
+#        fi
 }
 
 case "$target" in

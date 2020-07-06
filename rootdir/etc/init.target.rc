@@ -73,13 +73,13 @@ on post-fs-data
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-    mkdir /data/vendor/hbtp 0750 system system
+#   mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
-    chown system system /sys/kernel/hbtp/display_pwr
+#   chown system system /sys/kernel/hbtp/display_pwr
     start rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
@@ -418,11 +418,11 @@ on property:init.svc.vendor.hwcomposer-2-3=restarting
 on charger
      setprop sys.usb.configfs 1
 
-service hbtp /system/vendor/bin/hbtp_daemon
-     class main
-     user system
-     group system
-     disabled
+#service hbtp /system/vendor/bin/hbtp_daemon
+#     class main
+#     user system
+#     group system
+#     disabled
 
 service energy-awareness /system/vendor/bin/energy-awareness
     class main
