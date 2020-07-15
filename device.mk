@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
+    init.devicesetting.rc \
     init.insmod.sh \
     init.msm.usb.configfs.rc \
     init.oppo.vendor.motor.rc \
