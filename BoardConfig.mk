@@ -105,6 +105,17 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
+# NFC
+TARGET_USES_NQ_NFC := true
+BOARD_NFC_CHIPSET := pn544
+
+ODM_MANIFEST_SKUS += \
+    nfc_ese \
+    secure_element_uicc
+    
+ODM_MANIFEST_NFC_ESE_FILES := $(DEVICE_PATH)/manifest_nfc_ese.xml
+ODM_MANIFEST_SECURE_ELEMENT_UICC_FILES := $(DEVICE_PATH)/manifest_secure_element_uicc.xml
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864

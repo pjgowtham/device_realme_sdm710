@@ -65,4 +65,5 @@
     <hidden-api-whitelisted-app package="com.qualcomm.qti.uim" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.client" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
+    <allow-in-power-save package="com.qualcomm.qti.gsma.services.nfc" />
 </config>
