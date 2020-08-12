@@ -317,6 +317,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/com.oppo.nfc_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/com.oppo.nfc_feature.xml
     
+# Perfd (dummy)
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+    
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 -include $(LOCAL_PATH)/vendor_prop.mk
