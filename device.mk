@@ -14,6 +14,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/realme/RMX1921/RMX1921-vendor.mk)
 
+# Dalvik VM Configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
