@@ -8,6 +8,27 @@ vendor/etc/acdbdata/19651/Handset_cal.acdb
 vendor/etc/acdbdata/19651/Hdmi_cal.acdb
 vendor/etc/acdbdata/19651/Headset_cal.acdb
 vendor/etc/acdbdata/19651/Speaker_cal.acdb
+vendor/etc/acdbdata/18041/Bluetooth_cal.acdb
+vendor/etc/acdbdata/18041/General_cal.acdb
+vendor/etc/acdbdata/18041/Global_cal.acdb
+vendor/etc/acdbdata/18041/Handset_cal.acdb
+vendor/etc/acdbdata/18041/Hdmi_cal.acdb
+vendor/etc/acdbdata/18041/Headset_cal.acdb
+vendor/etc/acdbdata/18041/Speaker_cal.acdb
+vendor/etc/acdbdata/18621/Bluetooth_cal.acdb
+vendor/etc/acdbdata/18621/General_cal.acdb
+vendor/etc/acdbdata/18621/Global_cal.acdb
+vendor/etc/acdbdata/18621/Handset_cal.acdb
+vendor/etc/acdbdata/18621/Hdmi_cal.acdb
+vendor/etc/acdbdata/18621/Headset_cal.acdb
+vendor/etc/acdbdata/18621/Speaker_cal.acdb
+vendor/etc/acdbdata/19691/Bluetooth_cal.acdb
+vendor/etc/acdbdata/19691/General_cal.acdb
+vendor/etc/acdbdata/19691/Global_cal.acdb
+vendor/etc/acdbdata/19691/Handset_cal.acdb
+vendor/etc/acdbdata/19691/Hdmi_cal.acdb
+vendor/etc/acdbdata/19691/Headset_cal.acdb
+vendor/etc/acdbdata/19691/Speaker_cal.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP
@@ -110,6 +131,9 @@ vendor/lib/soundfx/libdiraceffect.so
 
 # Audio - Firmware
 vendor/firmware/tfa98xx_19651.cnt
+vendor/firmware/tfa98xx_18041.cnt
+vendor/firmware/tfa98xx_18621.cnt
+vendor/firmware/tfa98xx_19691.cnt
 vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/voice_amodel.bin
 
@@ -429,6 +453,9 @@ vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger - Firmware
 vendor/firmware/fastchg/19651/oppo_vooc_fw.bin
+vendor/firmware/fastchg/18041/oppo_vooc_fw.bin
+vendor/firmware/fastchg/18621/oppo_vooc_fw.bin
+vendor/firmware/fastchg/19691/oppo_vooc_fw.bin
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
@@ -556,6 +583,7 @@ vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_rm19651samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_oppo18041samsung_ams653tk01_1080_2340_cmd_mode_dsi_panel.xml
 vendor/etc/OPPO_OLED_AD_calib.cfg
 
 # dpAP firmware
@@ -1426,6 +1454,15 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/firmware/tp/19651/FW_S3706_SAMSUNG.img
 vendor/firmware/tp/19651/FW_S3706_SAMSUNG_FAE.img
 vendor/firmware/tp/19651/LIMIT_S3706_SAMSUNG.img
+vendor/firmware/tp/18041/FW_S3706_SAMSUNG.img
+vendor/firmware/tp/18041/FW_S3706_SAMSUNG_FAE.img
+vendor/firmware/tp/18041/LIMIT_S3706_SAMSUNG.img
+vendor/firmware/tp/18621/FW_HX_NF83112A_DSJM.img
+vendor/firmware/tp/18621/FW_HX_NF83112A_DSJM_FAE.img
+vendor/firmware/tp/18621/FW_HX_NF83112A_DSJM_TEST.img
+vendor/firmware/tp/19691/FW_HX_NF83112A_DSJM.img
+vendor/firmware/tp/19691/FW_HX_NF83112A_DSJM_FAE.img
+vendor/firmware/tp/19691/FW_HX_NF83112A_DSJM_TEST.img
 
 # Thermal engine
 vendor/bin/thermal-engine
