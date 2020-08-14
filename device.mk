@@ -155,7 +155,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     RealmeCameraHelper \
-    lineage.camera.motor@1.0-service.RMX1901
+    vendor.lineage.camera.motor@1.0-service.RMX1901
     
 # Context Hub
 PRODUCT_PACKAGES += \
