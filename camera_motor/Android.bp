@@ -18,6 +18,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "lineage.camera.motor@1.0-service.RMX1901",
     init_rc: ["lineage.camera.motor@1.0-service.RMX1901.rc"],
+    vintf_fragments: ["vendor.lineage.camera.motor@1.0-service.RMX1901.xml"],
     srcs: ["service.cpp", "CameraMotor.cpp"],
     shared_libs: [
         "libbase",
