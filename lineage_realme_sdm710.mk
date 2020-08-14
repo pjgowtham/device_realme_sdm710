@@ -12,16 +12,15 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Realme
-PRODUCT_DEVICE := RMX1921
+PRODUCT_DEVICE := realme_sdm710
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := lineage_RMX1921
-PRODUCT_MODEL := Realme XT
+PRODUCT_NAME := lineage_realme_sdm710
+PRODUCT_MODEL := realme_sdm710
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="unknown-user 10 QKQ1.190918.001 unknown release-keys" \
-    PRODUCT_NAME="RMX1921"
+    PRIVATE_BUILD_DESC="coral-user 10 QQ3A.200805.001 6578210 release-keys"
     
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "realme/RMX1921/RMX1921:10/QKQ1.190918.001/1590390095:user/release-keys"
+BUILD_FINGERPRINT := google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys

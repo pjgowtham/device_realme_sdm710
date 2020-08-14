@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX1921.mk
+    $(LOCAL_DIR)/lineage_realme_sdm710.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX1921-userdebug \
-    lineage_RMX1921-eng
+    lineage_realme_sdm710-userdebug \
+    lineage_realme_sdm710-eng

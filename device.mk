@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Realme XT is a product launched with pie
+# Launched with pie
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 
 # Inherit from those products. Most specific first.
@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/realme/RMX1921/RMX1921-vendor.mk)
+$(call inherit-product-if-exists, vendor/realme/realme_sdm710/realme_sdm710-vendor.mk)
 
 # Dalvik VM Configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
@@ -219,8 +219,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.oppo.hardware.biometrics.fingerprint@2.1 \
-    android.hardware.biometrics.fingerprint@2.1-service.RMX1921 \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.RMX1921
+    android.hardware.biometrics.fingerprint@2.1-service.realme_sdm710 \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sdm710
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -242,7 +242,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.RMX1921
+    android.hardware.light@2.0-service.realme_sdm710
 
 # Media
 PRODUCT_PACKAGES += \
@@ -362,7 +362,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_RMX1921
+    librecovery_updater_realme_sdm710
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -374,7 +374,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.RMX1921 \
+    android.hardware.sensors@1.0-impl.realme_sdm710 \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
@@ -407,7 +407,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.RMX1921
+    vendor.lineage.touch@1.0-service.realme_sdm710
     
 # Trust HAL
 PRODUCT_PACKAGES += \

@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=RMX1921
+DEVICE=realme_sdm710
 VENDOR=realme
 
 # Load extract_utils and do some sanity checks

@@ -17,10 +17,10 @@
 
 set -e
 
-DEVICE=RMX1921
+DEVICE=realme_sdm710
 VENDOR=realme
 
-INITIAL_COPYRIGHT_YEAR=2019
+INITIAL_COPYRIGHT_YEAR=2020
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

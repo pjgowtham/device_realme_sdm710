@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/realme/RMX1921
+DEVICE_PATH := device/realme/realme_sdm710
 BOARD_VENDOR := realme
 BUILD_BROKEN_DUP_RULES := true
 
@@ -39,7 +39,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/realme/RMX1921
+TARGET_KERNEL_SOURCE := kernel/realme/sdm710
 TARGET_KERNEL_CONFIG := RMX1921_defconfig
 
 # APEX
@@ -94,7 +94,7 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.RMX1921
+TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.realme_sdm710
 
 # Graphics
 TARGET_USES_GRALLOC1 := true
@@ -162,7 +162,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_RMX1921
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_realme_sdm710
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Root

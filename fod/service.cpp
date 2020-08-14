@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.RMX1921"
+#define LOG_TAG "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sdm710"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

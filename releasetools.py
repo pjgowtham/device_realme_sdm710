@@ -46,6 +46,17 @@ def AddImage(info, basename, dest):
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  info.script.Print("Remounting Vendor")
+  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
+  info.script.Mount("/vendor")
+  info.script.Print("Running Unifying Script")
+  RunCustomScript(info, "realme_sdm710_unifying_script.sh", "")
+  info.script.Print("Unmounting Vendor")
+  info.script.Unmount("/vendor")
+  return
+
+def RunCustomScript(info, name, arg):
+  info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))
   return
   
 def AddTrustZoneAssertion(info, input_zip):
@@ -54,6 +65,6 @@ def AddTrustZoneAssertion(info, input_zip):
   if m:
     versions = m.group(1).split('|')
     if len(versions) and '*' not in versions:
-      cmd = 'assert(RMX1921.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 10 based Realme UI build. Please upgrade firmware and retry!"););'
+      cmd = 'assert(realme_sdm710.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 10 based Realme UI build. Please upgrade firmware and retry!"););'
       info.script.AppendExtra(cmd)
   return
