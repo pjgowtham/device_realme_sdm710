@@ -696,6 +696,17 @@ vendor/firmware/goodixfp.b05|4b0183125ae385847f298b41069df15a5d9811d5
 vendor/firmware/goodixfp.b06|0d5429550cb59f8ebb8db0239c07dc39dced66a3
 vendor/firmware/goodixfp.b07|1b33a3c20ea4898ba3d4d9b6e85e75818ffb2e84
 
+# Fingerprint Firmware - FPC (Extracted from vendor/euclid/product.img) from Realme 3 pro
+vendor/firmware/a_fp.mdt|9167490ad1a70da833fa37ab712ec03f6e0e1a0a
+vendor/firmware/a_fp.b00|01e5f1805a5e61a5da4d22267cb9f59b5cd8ef87
+vendor/firmware/a_fp.b01|6d21105b1ac3535391ef8a5a9d5ea371eb9182c2
+vendor/firmware/a_fp.b02|fe2f62b82b22ff7914e65baf5d0018d8edd4aae6 
+vendor/firmware/a_fp.b03|015829a1c64e127dc85117bfbaed01de24c122c1
+vendor/firmware/a_fp.b04|87790633a59aa10eaeeb6a513b6b0791191f5cdf
+vendor/firmware/a_fp.b05|81f17a0be298ab3af4e9522e65d047f3b5b2f960
+vendor/firmware/a_fp.b06|66e9b3a4e9b6d9ce3cb315300e5228b154665c30
+vendor/firmware/a_fp.b07|247a5027952484871b4edbed3be41d0caa7f01b2
+
 # GPS
 -vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
