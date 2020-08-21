@@ -105,6 +105,10 @@ TARGET_USES_ION := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_sdm710
+TARGET_RECOVERY_DEVICE_MODULES := libinit_realme_sdm710
+
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
