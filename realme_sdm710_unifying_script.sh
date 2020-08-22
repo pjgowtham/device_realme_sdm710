@@ -37,7 +37,7 @@ else
 fi
 
 # Remove NFC stuffs on devices other than EU/RU versions of Realme XT
-if [ "$RMX_PEAFOWL_EU" = "nfc_ese" ] || [ "$RMX_PEAFOWL_EU" = "RMX1921EU" ] ] ; then
+if [ "$RMX_PEAFOWL_EU" = "nfc_ese" ] || [ "$RMX_PEAFOWL_EU" = "RMX1921EU" ] ; then
     echo "Preserving NFC feature"
 else
    echo "Attempting to remove NFC feature"
@@ -60,4 +60,15 @@ else
     rm -rf /vendor/lib64/*nfc*
     rm -rf /vendor/lib64/hw/*nfc*
     echo "Done removing NFC feature"
+fi
+
+# Remove GW1 camera blobs for Realme 5 Pro
+if [ "$RMX_PEAFOWL" = "RMX1971" ] ; then
+    echo "Attempting to fix camera libs"
+    rm -rf /vendor/lib64/camera/com.qti.sensormodule.qtech_s5kgw1.bin
+    rm -rf /vendor/lib64/camera/com.qti.sensormodule.sunny_s5kgw1.bin
+    rm -rf /vendor/lib64/camera/com.qti.sensormodule.sunny_s5kgw1_evt0_2.bin
+    rm -rf /vendor/lib64/camera/com.qti.tuned.qtech_s5kgw1.bin
+    rm -rf /vendor/lib64/camera/com.qti.tuned.sunny_s5kgw1.bin
+    echo "Done fixing camera libs"
 fi
