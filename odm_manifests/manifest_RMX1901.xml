@@ -1,0 +1,22 @@
+<manifest version="1.0" type="device">
+    <!--Lineage FOD hal -->
+    <hal format="hidl">
+        <name>vendor.lineage.biometrics.fingerprint.inscreen</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintInscreen</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!--Lineage Motor hal -->    
+    <hal format="hidl">
+        <name>vendor.lineage.camera.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICameraMotor</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
