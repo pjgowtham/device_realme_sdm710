@@ -427,12 +427,6 @@ vendor/lib64/libarcsoft_super_night_raw.so
 vendor/etc/camera/oppo_camera_config.xml|eb5577b427191549662162c6d634b521b78bd9db
 vendor/etc/camera/engineer_camera_config|88e9081d8f73d4d245e9d2d80902536495c49ddc
 vendor/etc/camera/stereoParams.bin|e202cd15fcfdbc8352471d12c0e448ae5849e278
-
-# Camera - Realme 5 pro specific
-vendor/lib64/camera/5p_com.qti.tuned.holitech_gc2375h.bin|630f55febdd98b00c80c1e6d307cb16572ce1ae0
-vendor/lib64/camera/5p_com.qti.tuned.sunny_hi846.bin|8fc69512ddd6a5e89f41ef4506fb0a327b268f2e
-vendor/lib64/camera/5p_com.qti.tuned.truly_imx471.bin|2dbca7e1eb8accc1c838efe96455766760415fd2
-vendor/lib64/camera/5p_libarcsoft_low_light_hdr.so|8f472fa377e75e6abf2eb6e9e7cffc51506a4eab
     
 # Camera-configs
 vendor/etc/camera/arc_golden.bin
