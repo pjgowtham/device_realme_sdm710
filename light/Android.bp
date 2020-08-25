@@ -15,11 +15,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    vintf_fragments: ["android.hardware.light@2.0-service.realme_sdm710.xml"],
     name: "android.hardware.light@2.0-service.realme_sdm710",
     init_rc: ["android.hardware.light@2.0-service.realme_sdm710.rc"],
     srcs: ["service.cpp", "Light.cpp"],
-    proprietary: true,
     shared_libs: [
         "libbase",
         "libhardware",

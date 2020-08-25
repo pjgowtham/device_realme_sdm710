@@ -3,7 +3,6 @@ cc_library_shared {
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: ["Sensors.cpp"],
-    proprietary: true,
     shared_libs: [
         "liblog",
         "libcutils",
@@ -22,7 +21,6 @@ cc_library_shared {
 
 cc_library_static {
     name: "multihal_realme_sdm710",
-    proprietary: true,
     srcs: [
         "multihal.cpp",
         "SensorEventQueue.cpp",
