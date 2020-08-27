@@ -185,7 +185,8 @@ PRODUCT_PACKAGES += \
 # Doze
 PRODUCT_PACKAGES += \
     RealmeParts \
-    devicesettings
+    devicesettings \
+    RealmeProximityHelper
 
 # DRM
 PRODUCT_PACKAGES += \
