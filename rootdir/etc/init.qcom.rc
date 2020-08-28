@@ -1,4 +1,1 @@
 import /system/etc/init/init.devicesetting.rc
-
-on post-fs-data    
-        mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
