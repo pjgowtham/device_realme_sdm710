@@ -115,8 +115,6 @@ vendor/lib/libaudioEngineerTest.so
 vendor/lib/libaudio_log_utils.so
 
 # Audio FX modules
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
@@ -1256,11 +1254,13 @@ vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
+etc/permissions/privapp-permissions-qti.xml
 
 # RIL - Pinned blobs are from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_30B:user/release-keys
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|165109022921de31007f8ebc7304de08ecde6bb4
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/framework/qcrilhook.jar|3afd31d5a08e220904441d5c8c0bcf43b8ebbbfe
 product/framework/qti-telephony-common.jar|fabeba9162fd802a1ba048ddbb5b3b2d23545183
 product/framework/QtiTelephonyServicelibrary.jar
