@@ -6,10 +6,6 @@
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Audio FX modules
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-
 # Bluetooth (aptX) - from crosshatch - QQ3A.200605.001
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
@@ -156,12 +152,13 @@ bin/chargeonlymode|1cd4c3850c668cc34ac2b7d8daa804bf6561b2bd
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml
 etc/sysconfig/qti_whitelist.xml
-product/etc/permissions/privapp-permissions-qti.xml
+etc/permissions/privapp-permissions-qti.xml
 
 # RIL - Pinned blobs are from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_30B:user/release-keys
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|165109022921de31007f8ebc7304de08ecde6bb4
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/framework/qcrilhook.jar|3afd31d5a08e220904441d5c8c0bcf43b8ebbbfe
 product/framework/qti-telephony-common.jar|fabeba9162fd802a1ba048ddbb5b3b2d23545183
 product/framework/QtiTelephonyServicelibrary.jar
