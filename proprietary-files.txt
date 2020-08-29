@@ -155,6 +155,8 @@ bin/chargeonlymode|1cd4c3850c668cc34ac2b7d8daa804bf6561b2bd
 # QMI
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml
+etc/sysconfig/qti_whitelist.xml
+product/etc/permissions/privapp-permissions-qti.xml
 
 # RIL - Pinned blobs are from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_30B:user/release-keys
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|165109022921de31007f8ebc7304de08ecde6bb4
