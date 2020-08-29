@@ -14,6 +14,33 @@ product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 lib/libchromaflash.so
 lib64/libseemore.so
 
+# CNE
+etc/cne/Nexus/ATT/ATT_profiles.xml
+etc/cne/Nexus/ROW/ROW_profiles.xml
+etc/cne/Nexus/VZW/VZW_profiles.xml
+product/framework/com.quicinc.cne.api-V1.1-java.jar
+product/framework/com.quicinc.cne.constants-V1.0-java.jar
+product/framework/com.quicinc.cne.constants-V2.0-java.jar
+product/framework/com.quicinc.cne.constants-V2.1-java.jar
+product/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar
+product/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar
+product/lib64/com.quicinc.cne.api@1.0.so
+product/lib64/com.quicinc.cne.api@1.1.so
+product/lib64/com.quicinc.cne.constants@1.0.so
+product/lib64/com.quicinc.cne.constants@2.0.so
+product/lib64/com.quicinc.cne.constants@2.1.so
+product/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
+product/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+product/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
+product/lib/com.quicinc.cne.api@1.0.so
+product/lib/com.quicinc.cne.api@1.1.so
+product/lib/com.quicinc.cne.constants@1.0.so
+product/lib/com.quicinc.cne.constants@2.0.so
+product/lib/com.quicinc.cne.constants@2.1.so
+product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
+product/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+product/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
+
 # DPM
 product/bin/dpmd
 product/etc/dpm/dpm.conf
