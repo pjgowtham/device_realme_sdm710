@@ -114,6 +114,13 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+# ODM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/odm_manifests/manifest_RMX1901.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/odm/etc/manifest_RMX1901.xml \
+    $(LOCAL_PATH)/odm_manifests/manifest_RMX1901.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/odm/etc/manifest_RMX1901CN.xml \
+    $(LOCAL_PATH)/odm_manifests/manifest_RMX1921.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/odm/etc/manifest_RMX1921.xml \
+    $(LOCAL_PATH)/odm_manifests/manifest_RMX1921EU.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/odm/etc/manifest_RMX1921EU.xml
+    
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
