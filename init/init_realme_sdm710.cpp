@@ -35,6 +35,8 @@ void vendor_load_properties() {
 	std::ifstream infile("/proc/oppoVersion/prjName");
 	getline(infile, prjName);
 	
+	property_set("ro.sf.lcd_density", "440");
+	
 	if (prjName == "19651") {
             model = "RMX1921";
             property_set("ro.power_profile.override", "power_profile_XT");
