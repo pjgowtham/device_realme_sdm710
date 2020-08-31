@@ -13,5 +13,9 @@ on boot
     # Update touchscreen firmware
     write /proc/touchpanel/tp_fw_update 1
 
+on post-fs-data
+    mount none /system/lib/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
+    mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
+
 service cvphalservice /system/bin/true
     disabled
