@@ -17,5 +17,12 @@ on post-fs-data
     mount none /system/lib/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
     mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
 
+service vendor.charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
 service cvphalservice /system/bin/true
     disabled
