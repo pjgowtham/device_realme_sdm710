@@ -30,3 +30,19 @@ service charger /system/bin/charger
 
 service cvphalservice /system/bin/true
     disabled
+
+service wifi_diag_stop /vendor/bin/wifistopftmtest
+    override
+    disabled
+
+service wifitestdiag /vendor/bin/wifi_diag
+    override
+    disabled
+
+service wifi_ftmd /system/vendor/bin/wifi_ftmd
+    override
+    disabled
+
+service wififtm /system/vendor/bin/wififtm
+    override
+    disabled
