@@ -149,6 +149,14 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_realme_sdm710
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Root symlinks
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /system/firmware:/oppo_product/vendor/firmware \
+    /mnt/vendor/persist:/persist \
+    /vendor/bt_firmware:/bt_firmware \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware    
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-06-05
 
