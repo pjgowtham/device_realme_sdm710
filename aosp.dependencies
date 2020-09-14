@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "evo-devices",
+    "repository": "vendor_realme",
+    "target_path": "vendor/realme",
+    "branch": "ten"
+  }
+]
