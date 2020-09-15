@@ -384,6 +384,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/unifying_script.sh:install/bin/unifying_script.sh
+    
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
