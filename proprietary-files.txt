@@ -1026,7 +1026,7 @@ product/lib/libdpmfdmgr.so
 product/lib/libdpmframework.so
 product/lib/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
-system/framework/tcmclient.jar
+framework/tcmclient.jar
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -1453,13 +1453,13 @@ vendor/lib64/liblistenjni.so
 vendor/lib64/liblistensoundmodel2.so
 
 # Media
-system/lib64/libFileMux.so
-system/lib64/libmmosal.so
-system/lib64/libmmparser_lite.so
-system/lib/libFileMux.so
-system/lib/libOmxMux.so
-system/lib/libmmosal.so
-system/lib/libmmparser_lite.so
+lib64/libFileMux.so
+lib64/libmmosal.so
+lib64/libmmparser_lite.so
+lib/libFileMux.so
+lib/libOmxMux.so
+lib/libmmosal.so
+lib/libmmparser_lite.so
 vendor/bin/vppservice
 vendor/etc/init/vppservice.rc
 vendor/lib64/libI420colorconvert.so
@@ -1951,7 +1951,7 @@ product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 bin/wfdservice
 etc/init/wfdservice.rc
 etc/wfdconfigsink.xml
--system/framework/WfdCommon.jar
+-framework/WfdCommon.jar
 lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
 lib64/libwfdclient.so
