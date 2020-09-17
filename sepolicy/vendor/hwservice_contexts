@@ -13,4 +13,8 @@ vendor.nxp.nxpese::INxpEse                                      u:object_r:nfc_h
 vendor.oppo.hardware.commondcs::ICommonDcsHalService                             u:object_r:dcs_hwservice:s0
 
 # Radio
-vendor.oppo.hardware.radio.oppoappradio::IOppoAppRadio          u:object_r:opporadio_hwservice:s0
+vendor.oppo.hardware.radio.opporadio::IOppoRadio          u:object_r:opporadio_hwservice:s0
+vendor.oppo.hardware.radio.oppoappradio::IOppoAppRadio    u:object_r:default_android_hwservice:s0
+
+# Motor
+vendor.lineage.camera.motor::ICameraMotor                 u:object_r:hal_lineage_camera_motor_hwservice:s0

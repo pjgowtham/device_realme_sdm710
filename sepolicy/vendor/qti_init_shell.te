@@ -11,6 +11,7 @@ allow qti_init_shell sensors_persist_file:fifo_file { getattr setattr };
 allow qti_init_shell proc_devinfo:dir search;
 allow qti_init_shell proc_devinfo:file { getattr open read };
 allow qti_init_shell sysfs:file setattr;
+allow qti_init_shell qti_init_shell:capability { kill };
 
 get_prop(qti_init_shell, oppo_debug_prop);
 get_prop(qti_init_shell, default_prop);

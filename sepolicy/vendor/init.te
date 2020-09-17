@@ -6,7 +6,7 @@ allow init proc_touchpanel:file { setattr getattr open write };
 dontaudit init { bt_firmware_file firmware_file }:filesystem getattr;
 allow init system_file:file execute_no_trans;
 allow init persist_file:lnk_file read;
-
+allow init init:binder { call  transfer };
 allow init sysfs_battery_supply:file setattr; 
 
 allow init vendor_toolbox_exec:file execute_no_trans;

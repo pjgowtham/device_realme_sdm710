@@ -28,3 +28,9 @@ genfscon proc /devinfo        u:object_r:proc_devinfo:s0
 
 # FPS info
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps        u:object_r:sysfs_graphics:s0
+
+# Camera Motor
+genfscon sysfs /devices/platform/vendor/vendor:motor_pl         u:object_r:sysfs_motor:s0
+
+# OTG
+#genfscon sysfs /sys/class/power_supply/usb/otg_switch           u:object_r:sysfs_usb_supply:s0

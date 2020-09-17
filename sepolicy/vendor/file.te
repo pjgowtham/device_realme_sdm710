@@ -5,13 +5,13 @@ type proc_touchpanel, fs_type, proc_type;
 type sysfs_oppo_display, fs_type, sysfs_type;
 
 # Oppo Project version
-type proc_oppoversion, fs_type, proc_type;
+type proc_oppoversion, fs_type, proc_type, file_type;
 
 # Oppo FP
 type proc_oppo_fp, fs_type, proc_type;
 
 # Camera
-type persist_camera_file, file_type;
+type persist_camera_file, file_type, vendor_persist_type;
 
 # Devinfo
 type proc_devinfo, fs_type, proc_type;
@@ -20,5 +20,9 @@ type proc_devinfo, fs_type, proc_type;
 type sysfs_fps, sysfs_type, fs_type;
 
 # Audio
-type persist_audio_file, file_type , vendor_persist_type;
+type persist_audio_file, file_type, vendor_persist_type;
+type sysfs_boot_adsp_file, file_type, fs_type;
 type proc_audio_file, file_type, data_file_type, core_data_file_type;
+
+# Camera Motor
+type sysfs_motor, fs_type, sysfs_type;

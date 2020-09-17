@@ -1,0 +1,1 @@
+allow proc_oppoversion proc_oppoversion:file { getattr open read };

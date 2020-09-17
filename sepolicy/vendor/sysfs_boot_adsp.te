@@ -1,0 +1,1 @@
+allow sysfs_boot_adsp sysfs_boot_adsp:file { open };

@@ -1,0 +1,2 @@
+allow persist_camera_file persist_camera_file:dir { add_name };
+allow persist_camera_file persist_camera_file:file { getattr };
