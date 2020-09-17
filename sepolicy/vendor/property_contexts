@@ -45,3 +45,11 @@ ro.vendor.camera.                        u:object_r:camera_ro_prop:s0
 
 # Oppo wlan prop
 persist.oppo.wlan.            u:object_r:oppo_wlan_prop:s0
+
+# Audio
+audio.volume.listener.dump                      u:object_r:vendor_audio_prop:s0
+audio.volume.headset.gain.depcal                u:object_r:vendor_audio_prop:s0
+audio_hal.in_period_size                        u:object_r:vendor_audio_prop:s0
+audio_hal.period_multiplier                     u:object_r:vendor_audio_prop:s0
+audio_hal.period_size                           u:object_r:vendor_audio_prop:s0
+persist.audio.dualmic.config                    u:object_r:vendor_audio_prop:s0

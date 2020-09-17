@@ -5,7 +5,8 @@ allow system_app hal_rcsservice:binder { call transfer };
 allow system_app system_data_file:dir { add_name create setattr write };
 allow system_app vendor_file:file { execute read };
 allow system_app init:binder call;
-allow system_app sysfs_zram:file { getaddr open read };
+allow system_app sysfs_zram:file { open read };
+allow system_app selinuxfs:file { open read };
 
 get_prop(system_app, oppo_debug_prop);
 get_prop(system_app, persist_camera_prop);

@@ -3,7 +3,7 @@ r_dir_file(rild, proc_devinfo);
 
 dontaudit rild tombstone_data_file:dir search;
 dontaudit rild vendor_file:file ioctl;
-
+allow rild opporadio_hwservice:hwservice_manager add;
 allow rild cache_file:dir { add_name getattr create search write };
 allow rild cache_file:file { create open write };
 allow rild system_data_file:dir getattr;
