@@ -1942,6 +1942,7 @@ vendor/firmware/ufs/SKhynix-H9HQ53AECMMDAR.bin
 
 # WiFi
 vendor/bin/cnss-daemon
+vendor/firmware/wlan/qca_cld/wlan_mac.bin
 
 # WiFi Display - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_31A:user/release-keys
 product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
