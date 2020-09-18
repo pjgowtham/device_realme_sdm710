@@ -184,8 +184,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-06-05
 
-# Sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
 
