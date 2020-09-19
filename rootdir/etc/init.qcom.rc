@@ -16,6 +16,7 @@ on boot
 on post-fs-data
     mount none /system/lib/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
     mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
+    mount none /system/etc/nfc/com.oppo.nfc_feature.xml /vendor/etc/nfc/com.oppo.nfc_feature.xml bind
 
 service vendor.charger /system/bin/chargeonlymode
     class charger

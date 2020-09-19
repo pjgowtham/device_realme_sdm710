@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/nfc/com.oppo.nfc_feature.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfc/com.oppo.nfc_feature.xml
+
 # ODM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/odm_manifests/manifest_RMX1901.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/odm/etc/manifest_RMX1901.xml \
