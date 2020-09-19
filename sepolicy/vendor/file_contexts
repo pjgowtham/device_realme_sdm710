@@ -26,6 +26,7 @@
 /mnt/vendor/persist/camera(/.*)?                                                             u:object_r:persist_camera_file:s0
 
 # Sensors
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.realme_sdm710                      u:object_r:sysfs_wake_lock:s0
 /persist/sensors(/.*)?          u:object_r:sensors_persist_file:s0
 
 # Oppo Partitions
