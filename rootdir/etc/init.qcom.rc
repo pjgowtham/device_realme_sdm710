@@ -18,6 +18,14 @@ on post-fs-data
     mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.realme_sdm710.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
     mount none /system/etc/nfc/com.oppo.nfc_feature.xml /vendor/etc/nfc/com.oppo.nfc_feature.xml bind
 
+# Safetynet bypass
+# Inspired in magisk source code, by topjohnwu
+# Ported to ramdisk by jhenrique09
+on property:sys.boot_completed=1
+   # selinux nodes, hide permissive state
+   chmod 0640 /sys/fs/selinux/enforce
+   chmod 0440 /sys/fs/selinux/policy
+
 service vendor.charger /system/bin/chargeonlymode
     class charger
     user system
