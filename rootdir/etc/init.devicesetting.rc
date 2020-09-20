@@ -18,3 +18,8 @@ on boot
     #Preset touchpanel tuner nodes
     write /proc/touchpanel/oppo_tp_limit_enable 0
     write /proc/touchpanel/oppo_tp_direction 1
+    
+    # Update touchscreen firmware
+    chown system system /proc/touchpanel/tp_fw_update
+    chmod 0666 /proc/touchpanel/tp_fw_update
+    write /proc/touchpanel/tp_fw_update 1
