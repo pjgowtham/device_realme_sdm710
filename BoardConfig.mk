@@ -148,7 +148,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Root symlinks
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /system/firmware:/oppo_product/vendor/firmware \
     /mnt/vendor/persist:/persist \
     /vendor/bt_firmware:/bt_firmware \
     /vendor/dsp:/dsp \
