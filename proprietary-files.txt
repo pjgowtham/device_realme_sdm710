@@ -1,4 +1,4 @@
-# All unpinned blobs are from RMX1921EX_11_C.05
+# All unpinned blobs are from RMX1921EX_11_C.07
 
 # ANT
 -lib/libantradio.so
