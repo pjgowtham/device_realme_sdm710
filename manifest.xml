@@ -164,15 +164,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.power</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IPower</name>
-            <instance>default</instance>
-       </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -368,6 +359,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <version>2.4</version>
@@ -380,6 +372,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- IMS RTP Service -->
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
+=======
+        <name>vendor.lineage.trust</name>
+>>>>>>> 8e9f925... sdm845-common: Build new aidl qti power HAL
         <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
@@ -727,16 +722,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IUsbRestrict</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- Lineage Power HAL-->
-    <hal format="hidl">
-        <name>vendor.lineage.power</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILineagePower</name>
             <instance>default</instance>
         </interface>
     </hal>
