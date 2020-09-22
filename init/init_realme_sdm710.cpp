@@ -42,8 +42,6 @@ void vendor_load_properties() {
             property_set("ro.power_profile.override", "power_profile_XT");
                if (oppo_sku == "nfc_ese" || oppo_sku == "RMX1921EU") {	
                    device = "RMX1921EU";
-                   property_set("ro.hardware.nfc_nci", "nqx.default");
-                   property_set("ro.nfc.port", "I2C");
                } else {
                     device = "RMX1921";
                             }
