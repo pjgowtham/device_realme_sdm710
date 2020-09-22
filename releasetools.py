@@ -46,6 +46,17 @@ def AddImage(info, basename, dest):
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  info.script.Print("Remounting System")
+  info.script.AppendExtra('ifelse(is_mounted("/system"), unmount("/system"));');
+  info.script.Mount("/system")
+  info.script.Print("Running Unifying Script")
+  RunCustomScript(info, "system_unifying_script.sh", "")
+  info.script.Print("Unmounting System")
+  info.script.Unmount("/system")  
+  return
+
+def RunCustomScript(info, name, arg):
+  info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))
   return
   
 def AddTrustZoneAssertion(info, input_zip):
