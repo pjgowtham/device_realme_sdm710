@@ -8,6 +8,9 @@ audio.sys.offload.pstimeout.secs=3
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
