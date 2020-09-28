@@ -48,11 +48,11 @@ def OTA_InstallEnd(info):
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   info.script.Print("Remounting System")
   info.script.AppendExtra('ifelse(is_mounted("/system"), unmount("/system"));');
-  info.script.Mount("/system")
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system");');
   info.script.Print("Running Unifying Script")
   RunCustomScript(info, "system_unifying_script.sh", "")
-  info.script.Print("Unmounting System")
-  info.script.Unmount("/system")  
+  info.script.Print("Unmounting System as Root")
+  info.script.AppendExtra('unmount("/system");'); 
   return
 
 def RunCustomScript(info, name, arg):
