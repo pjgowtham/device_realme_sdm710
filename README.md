@@ -1,5 +1,7 @@
 # Device Tree files for Realme SDM710 devices
-
+## Status
+* System only builds are stable except for the video calling feature on all device variants
+* Custom vendor builds are stable only on realme X and realme XT
 ## Supported Variants
 
 |   Device             |   Codename   |
