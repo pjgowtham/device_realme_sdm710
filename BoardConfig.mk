@@ -149,7 +149,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
-TARGET_POWER_SET_FEATURE_LIB := libpower_feature.realme_sdm710
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
