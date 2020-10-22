@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_realme_sdm710.mk
+    $(LOCAL_DIR)/evolution_realme_sdm710.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_realme_sdm710-userdebug \
-    aosp_realme_sdm710-eng
+    evolution_realme_sdm710-userdebug \
+    evolution_realme_sdm710-eng

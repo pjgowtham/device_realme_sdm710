@@ -19,7 +19,7 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := realme_sdm710
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := aosp_realme_sdm710
+PRODUCT_NAME := evolution_realme_sdm710
 PRODUCT_MODEL := realme_sdm710
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
