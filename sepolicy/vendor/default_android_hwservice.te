@@ -1,1 +1,0 @@
-allow default_android_hwservice default_android_hwservice:hwservice_manager { add };

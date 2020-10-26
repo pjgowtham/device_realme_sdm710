@@ -1,2 +1,0 @@
-get_prop(untrusted_app_25, theme_prop);
-allow untrusted_app_27 untrusted_app_27:udp_socket { ioctl };
