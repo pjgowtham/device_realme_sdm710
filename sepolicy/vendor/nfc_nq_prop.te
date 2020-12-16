@@ -1,1 +1,0 @@
-allow nfc_nq_prop nfc_nq_prop:file { getattr  open };

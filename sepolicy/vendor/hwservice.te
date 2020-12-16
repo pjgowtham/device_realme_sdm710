@@ -1,4 +1,0 @@
-type nfc_hwservice, hwservice_manager_type;
-type dcs_hwservice, hwservice_manager_type;
-type opporadio_hwservice, hwservice_manager_type;
-#type default_android_hwservice, hwservice_manager_type;
