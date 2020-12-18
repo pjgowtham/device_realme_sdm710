@@ -286,10 +286,10 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-PRODUCT_SOONG_NAMESPACES += \
+#PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/pn5xx
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     nqnfcee_access.xml \
@@ -297,9 +297,9 @@ PRODUCT_PACKAGES += \
     Tag \
     android.hardware.nfc@1.2-service
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+#    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/com.oppo.nfc_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/com.oppo.nfc_feature.xml
