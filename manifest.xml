@@ -267,13 +267,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                <instance>imsradio1</instance>
            </interface>
     </hal>
-    <!--UICC secure element -->
-    <hal format="hidl">
-       <name>android.hardware.secure_element</name>
-       <transport>hwbinder</transport>
-       <fqname>@1.0::ISecureElement/SIM1</fqname>
-       <fqname>@1.0::ISecureElement/SIM2</fqname>
-    </hal>
     <!-- dpm QMI hal service -->
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>

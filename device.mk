@@ -297,10 +297,6 @@ PRODUCT_PACKAGES += \
     Tag \
     android.hardware.nfc@1.2-service
 
-PRODUCT_PACKAGES += \
-    SecureElement \
-    android.hardware.secure_element@1.1-service
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
@@ -385,10 +381,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/unifying_script.sh:install/bin/unifying_script.sh
     
 # Telephony
 PRODUCT_PACKAGES += \

@@ -14,9 +14,4 @@
         <name>android.hardware.nfc</name>
         <transport>hwbinder</transport>
     </hal>
-    <!-- Secure Element is declared to be disabled -->
-    <hal override="true">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-    </hal>    
 </manifest>
