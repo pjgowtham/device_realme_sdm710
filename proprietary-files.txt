@@ -854,8 +854,6 @@ system_ext/lib64/libdiag_system.so|f85887535d7b5d984da3b2e3c329b8de6d8ad667
 system_ext/lib/vendor.qti.diaghal@1.0.so|b1ecc07366aa8690c51bdc77b8001cbcec8a96a9
 system_ext/lib64/vendor.qti.diaghal@1.0.so|d8710234e3a959f14f93cd4069b0fef8a18a5683
 vendor/bin/ims_rtp_daemon|255aaa7b0a93458331e474c530df77a18ed09ea5
-vendor/lib/libavservices_minijail.so
-vendor/lib64/libavservices_minijail.so
 
 # RIL
 vendor/bin/imsdatadaemon
