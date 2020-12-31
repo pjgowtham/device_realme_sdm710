@@ -363,12 +363,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-# RCS
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_realme_sdm710
