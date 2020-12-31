@@ -157,9 +157,6 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
-# RenderScript
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
