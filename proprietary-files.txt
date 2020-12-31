@@ -547,8 +547,6 @@ vendor/lib/libtinyxml2_1.so
 # Display Hardware
 vendor/lib/libsdmcore.so
 vendor/lib64/libsdmcore.so
-vendor/lib/hw/hwcomposer.sdm710.so
-vendor/lib64/hw/hwcomposer.sdm710.so
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
