@@ -99,6 +99,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
    ro.charger.enable_suspend=true
 
+# CNE
+PRODUCT_PRODUCT_PROPERTIES += \
+   persist.vendor.cne.feature=1
+
 # Codec2
 PRODUCT_PROPERTY_OVERRIDES +=  \
    debug.stagefright.omx_default_rank.sw-audio=1 \

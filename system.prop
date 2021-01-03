@@ -22,9 +22,6 @@ ro.camera.notify_nfc=1
 ro.camera.temperature.limit=470
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
-# CNE
-persist.vendor.cne.feature=1
-
 # Data modules
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
@@ -48,11 +45,6 @@ ro.qualcomm.cabl=0
 ro.vendor.display.ad=1
 ro.vendor.display.ad.sdr_calib_data=/vendor/etc/OPPO_OLED_AD_calib.cfg
 ro.vendor.display.sensortype=2
-
-# DPM
-persist.vendor.dpm.feature=1
-persist.vendor.dpm.loglevel=0
-persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Graphics
 debug.sf.disable_backpressure=1
