@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2020 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,6 +44,8 @@ class Light : public ILight {
     Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
   private:
+    void handleBacklight(const LightState& state);
+
     std::mutex mLock;
     std::unordered_map<Type, std::function<void(const LightState&)>> mLights;
 };

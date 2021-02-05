@@ -853,12 +853,12 @@ system_ext/lib/libdiag_system.so|5f8b6ec2e9d74474ab7716aa3978a6fb2b4505fa
 system_ext/lib64/libdiag_system.so|5b5c049d1ccccc92ddcd03be8e36ba5610fd51ba
 system_ext/lib/vendor.qti.diaghal@1.0.so|4b57f8303e027cd2dc21a42edd362d0701fd9682
 system_ext/lib64/vendor.qti.diaghal@1.0.so|c188fabf49a0fc8bfede65a701c6a8dc1a5aef40
-vendor/bin/ims_rtp_daemon|2c995a884bbde9f37a44a10ac8fb694b30af97ea
 
 # RIL
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
+vendor/bin/ims_rtp_daemon
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdatadaemon.rc
 vendor/etc/init/imsqmidaemon.rc
