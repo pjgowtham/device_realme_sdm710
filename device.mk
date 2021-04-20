@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RealmeCameraHelper \
     vendor.lineage.camera.motor@1.0-service.RMX1901
+
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
     
 # Context Hub
 PRODUCT_PACKAGES += \
