@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,16 +17,24 @@
 #pragma once
 
 #include <aidl/android/hardware/light/BnLights.h>
+#include <android-base/logging.h>
+#include <hardware/hardware.h>
+#include <hardware/lights.h>
+#include <vector>
+
+using ::aidl::android::hardware::light::HwLightState;
+using ::aidl::android::hardware::light::HwLight;
+using ::aidl::android::hardware::light::LightType;
+using ::aidl::android::hardware::light::BnLights;
 
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace light {
 
-// Default implementation that reports no supported lights.
 class Lights : public BnLights {
-    ndk::ScopedAStatus setLightState(int id, const HwLightState& state) override;
-    ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
+      ndk::ScopedAStatus setLightState(int id, const HwLightState& state) override;
+      ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
 };
 
 }  // namespace light

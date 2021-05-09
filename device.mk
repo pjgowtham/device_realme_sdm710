@@ -264,7 +264,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.realme_sdm710
+    android.hardware.lights-service.realme_sdm710
 
 # Media
 PRODUCT_PACKAGES += \
