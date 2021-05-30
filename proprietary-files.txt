@@ -1061,7 +1061,7 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Power-off charging daemon
-system/bin/charger:system/bin/chargeonlymode
+system/bin/charger:bin/chargeonlymode
 
 # QMI - from Nokia/Phoenix_00WW/PNX_sprout:11/RKQ1.200906.002/00WW_6_190:user/release-keys
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -1405,7 +1405,7 @@ vendor/bin/cnss-daemon
 vendor/firmware/wlan/qca_cld/wlan_mac.bin
 
 # WiFi Display - from Nokia/Phoenix_00WW/PNX_sprout:11/RKQ1.200906.002/00WW_6_190:user/release-keys
--system/framework/WfdCommon.jar|d3f2ef2a28ac4da51271c10435e75bb93e7f70d8
+-framework/WfdCommon.jar|d3f2ef2a28ac4da51271c10435e75bb93e7f70d8
 system_ext/bin/wfdservice|91f6e2d58de9354a694d3b3da6e6d224dd7e47c1
 system_ext/etc/init/wfdservice.rc|aab7aecb01c359fd521c99957c4d5bfd16a8dfae
 system_ext/etc/seccomp_policy/wfdservice.policy|ff82c22afdfc6a1f6f19db0d446f97e184d40043
