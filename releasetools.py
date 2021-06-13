@@ -46,6 +46,17 @@ def AddImage(info, basename, dest):
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  info.script.Print("Remounting Vendor")
+  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
+  info.script.Mount("/vendor")
+  info.script.Print("Running Unifying Script")
+  RunCustomScript(info, "realme_sdm710_unifying_script.sh", "")
+  info.script.Print("Unmounting Vendor")
+  info.script.Unmount("/vendor")
+  return
+
+def RunCustomScript(info, name, arg):
+  info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))
 
 def RunCustomScript(info, name, arg):
   info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))

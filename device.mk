@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
+    android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
@@ -93,9 +93,9 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio.effect@6.0-impl:32 \
-    android.hardware.soundtrigger@2.3-impl:32 \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -106,9 +106,8 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
-    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_oppo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_oppo.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
@@ -121,17 +120,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_platform_info_19651.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_19651.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_18041.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_18041.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_18621.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_18621.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_19691.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_19691.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_19651.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_19651.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_18041.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_18041.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_18621.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_18621.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_19691.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_19691.xml
+    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/mixer_paths.xml
+    
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/msm8998/audio/configs/sdm710/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     hardware/qcom-caf/msm8998/audio/configs/sdm710/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_i2s.xml \
     hardware/qcom-caf/msm8998/audio/configs/sdm710/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     hardware/qcom-caf/msm8998/audio/configs/sdm710/audio_platform_info_skuw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_skuw.xml \
@@ -364,7 +357,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.devicesetting.rc \
     init.insmod.sh \
-    init.msm.usb.configfs.rc \
     init.oppo.vendor.motor.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
@@ -419,6 +411,10 @@ PRODUCT_PACKAGES += \
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.realme_sdm710
+
+# Unifying script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/realme_sdm710_unifying_script.sh:install/bin/realme_sdm710_unifying_script.sh
 
 # USB
 PRODUCT_PACKAGES += \
