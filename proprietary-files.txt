@@ -1,4 +1,4 @@
-# All unpinned blobs are from RMX1921EX_11_C.08
+# All unpinned blobs are from RMX1901EX_F01
 
 # ACDB - Audio
 odm/etc/acdbdata/Bluetooth_cal.acdb
@@ -1347,6 +1347,14 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 vendor/etc/sensors/hals.conf
+odm/etc/sensor/config/alsps.json
+odm/etc/sensor/config/holi_ak991x_0.json
+odm/etc/sensor/config/holi_alsps.json
+odm/etc/sensor/config/holi_bmi160_0.json
+odm/etc/sensor/config/holi_lsm6ds3c_0.json
+odm/etc/sensor/config/holi_mmc5603x_0.json
+odm/etc/sensor/config/holi_mxg4300_0.json
+odm/etc/sensor/sensor_config.json
 
 # Sensors
 vendor/bin/sensors.qti
@@ -1355,11 +1363,13 @@ vendor/lib/libsensorslog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib/sensors.ssc.so
+odm/lib/oplus.sensors.ssc.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
+odm/lib64/oplus.sensors.ssc.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib64/libfastcvopt.so
