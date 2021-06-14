@@ -419,6 +419,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.realme_sdm710
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
 # Unifying script
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/realme_sdm710_unifying_script.sh:install/bin/realme_sdm710_unifying_script.sh
