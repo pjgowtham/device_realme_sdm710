@@ -26,31 +26,11 @@ persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
-# Display - oppo
-persist.sys.enable.rc=1
-ro.display.rc.size=108,108,111,111
-ro.lcd.backlight.samsung_tenbit=10,517,103,303,355,457,563,676,805,883,1023
-ro.lcd.backlight.config_dsjm=11,958,13,334,517,794,1055,1325,1617,1770,1989,2047
-ro.vendor.display.backlightapp=1
-ro.display.underscreenfingerprint=1
-ro.display.underscreen.lightsensor.support=1
-ro.lcd.display.screen.underlightsensor.region=624,28,672,76
-ro.display.underscreen.lightsensor.screenshot.period=50
+# Display
 persist.debug.wfd.enable=1
-ro.oppo.screen.heteromorphism=444,0:636,76
-
-# Display post-processing
-ro.qualcomm.cabl=0
-ro.vendor.display.ad=1
-ro.vendor.display.ad.sdr_calib_data=/vendor/etc/OPPO_OLED_AD_calib.cfg
-ro.vendor.display.sensortype=2
 
 # Graphics
-debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=1
-persist.demo.hdmirotationlock=false
-persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=0
 
 # IMS
 persist.vendor.ims.disableUserAgent=0
@@ -61,8 +41,8 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
 
-# Netflix custom property
-ro.netflix.bsp_rev=Q670-14477-1
+# system prop for NFC DT
+ro.nfc.port=I2C
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
@@ -88,12 +68,7 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # Sensors
-persist.sys.oppo.fusionlight=true
-persist.sys.oppo.proximity=true
-
-# Thermal
-persist.sys.enable.oscar=0
-persist.sys.oscar.dc=1
+persist.vendor.sensors.enable.mag_filter=true
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
