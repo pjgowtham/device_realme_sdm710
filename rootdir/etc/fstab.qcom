@@ -26,6 +26,5 @@
 /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.*.auto*     /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
 
 # Recovery only
-/dev/block/bootdevice/by-name/vendor         /vendor                 ext4    ro,barrier=1                                                                   wait,recoveryonly
 /dev/block/bootdevice/by-name/boot           /boot                   emmc    defaults                                                                       recoveryonly
 /dev/block/bootdevice/by-name/recovery       /recovery               emmc    defaults                                                                       recoveryonly

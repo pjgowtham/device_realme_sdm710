@@ -254,10 +254,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
-# Insmod files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
-
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
@@ -364,7 +360,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
     init.devicesetting.rc \
-    init.insmod.sh \
     init.oppo.vendor.motor.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
@@ -375,7 +370,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.realme_sdm710.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -463,5 +459,5 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     WfdCommon

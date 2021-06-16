@@ -1,0 +1,79 @@
+on init
+    chown system system /sys/kernel/oppo_display/hbm
+    chown system system /sys/kernel/oppo_display/seed
+    chown system system /sys/kernel/oppo_display/dimlayer_bl_en
+    chown system system /sys/kernel/oppo_display/ffl_set
+    chown system system /sys/kernel/oppo_display/dump_info
+    chown system system /sys/kernel/oppo_display/esd_status
+    chown system system /sys/kernel/oppo_display/power_status
+    chown system system /sys/kernel/oppo_display/dimlayer_hbm
+    chown system system /sys/kernel/oppo_display/notify_fppress
+    chown system system /sys/kernel/oppo_display/force_screenfp
+    chown system system /sys/kernel/oppo_display/sau_closebl_node
+    chown system system /sys/kernel/oppo_display/panel_serial_number
+    chown system system /sys/kernel/oppo_display/aod_light_mode_set
+    chown system system /sys/kernel/oppo_display/LCM_CABC
+
+    chmod 0666 /sys/kernel/oppo_display/hbm
+    chmod 0666 /sys/kernel/oppo_display/seed
+    chmod 0666 /sys/kernel/oppo_display/dimlayer_bl_en
+    chmod 0666 /sys/kernel/oppo_display/ffl_set
+    chmod 0666 /sys/kernel/oppo_display/dump_info
+    chmod 0666 /sys/kernel/oppo_display/esd_status
+    chmod 0666 /sys/kernel/oppo_display/power_status
+    chmod 0666 /sys/kernel/oppo_display/dimlayer_hbm
+    chmod 0666 /sys/kernel/oppo_display/notify_fppress
+    chmod 0666 /sys/kernel/oppo_display/force_screenfp
+    chmod 0666 /sys/kernel/oppo_display/sau_closebl_node
+    chmod 0666 /sys/kernel/oppo_display/panel_serial_number
+    chmod 0666 /sys/kernel/oppo_display/aod_light_mode_set
+    chmod 0666 /sys/kernel/oppo_display/LCM_CABC
+
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chown system system /proc/touchpanel/oplus_tp_limit_area
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/oplus_tp_limit_whitelist
+
+    #Changhui.Wu@BSP.charger. 2020/12/10, Add for charger decimal show
+    write /proc/ui_soc_decimal 1
+        
+on late-fs
+    #MoSiTing@ANDROID.PERFORMANCE, 2020/02/28, Add for boost boot time
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048  
+
+on early-boot
+    # SSR Setup
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
+ 
+on property:sys.boot_completed=1    
+    #MoSiTing@ANDROID.PERFORMANCE, 2020/02/28, Add for boost boot time
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/scheduler noop
+    write /sys/block/sda/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/dm-0/queue/read_ahead_kb 512
+    write /sys/block/dm-1/queue/read_ahead_kb 512
+
+   # Safetynet bypass
+   # Inspired in magisk source code, by topjohnwu
+   # Ported to ramdisk by jhenrique09
+   # selinux nodes, hide permissive state
+   chmod 0640 /sys/fs/selinux/enforce
+   chmod 0440 /sys/fs/selinux/policy    
+
+service vendor.charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0    
