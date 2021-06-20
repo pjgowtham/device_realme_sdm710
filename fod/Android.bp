@@ -19,7 +19,7 @@ cc_binary {
     name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sdm710",
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sdm710.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
-    proprietary: true,
+    device_specific: true,
     shared_libs: [
         "libbase",
         "libhardware",

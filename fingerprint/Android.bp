@@ -4,7 +4,7 @@ cc_binary {
     init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.realme_sdm710.rc"],
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.realme_sdm710.xml"],
     relative_install_path: "hw",
-    proprietary: true,
+    device_specific: true,
     srcs: [
         "BiometricsFingerprint.cpp",
         "service.cpp",
@@ -20,6 +20,6 @@ cc_binary {
         "libutils",
         "libbase",
         "android.hardware.biometrics.fingerprint@2.1",
-        "vendor.oppo.hardware.biometrics.fingerprint@2.1",
+        "vendor.oplus.hardware.biometrics.fingerprint@2.1",
     ],
 }
