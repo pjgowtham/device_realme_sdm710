@@ -61,13 +61,3 @@ def RunCustomScript(info, name, arg):
 def RunCustomScript(info, name, arg):
   info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))
   return
-
-def AddTrustZoneAssertion(info, input_zip):
-  android_info = info.input_zip.read("OTA/android-info.txt")
-  m = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
-  if m:
-    versions = m.group(1).split('|')
-    if len(versions) and '*' not in versions:
-      cmd = 'assert(realme_sdm710.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 10 based Realme UI build. Please upgrade firmware and retry!"););'
-      info.script.AppendExtra(cmd)
-  return

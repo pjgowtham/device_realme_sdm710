@@ -373,10 +373,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.realme_sdm710.rc
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_realme_sdm710
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
