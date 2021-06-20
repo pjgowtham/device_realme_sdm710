@@ -4,3 +4,4 @@ service camera-motor-1-0 /vendor/bin/hw/vendor.lineage.camera.motor@1.0-service.
     user system
     group system
     shutdown critical
+    disabled

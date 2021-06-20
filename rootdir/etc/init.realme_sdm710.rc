@@ -76,4 +76,24 @@ service vendor.charger /system/bin/chargeonlymode
     user system
     group system graphics input
     capabilities SYS_BOOT
-    seclabel u:r:charger:s0    
+    seclabel u:r:charger:s0
+    
+# Enable NFC service for RMX1921EU
+on boot && property:ro.boot.product.hardware.sku=RMX1921EU
+    start vendor.nfc_hal_service
+    
+# Enable motor service for RMX1901
+on boot && property:ro.boot.product.hardware.sku=RMX1901
+    start camera-motor-1-0
+
+# Enable motor service for RMX1901CN
+on boot && property:ro.boot.product.hardware.sku=RMX1901CN
+    start camera-motor-1-0
+
+# Stop FOD service for RMX1851
+on boot && property:ro.boot.product.hardware.sku=RMX1851
+    stop fingerprint-inscreen-1-0
+    
+# Stop FOD service for RMX1971
+on boot && property:ro.boot.product.hardware.sku=RMX1971
+    stop fingerprint-inscreen-1-0
