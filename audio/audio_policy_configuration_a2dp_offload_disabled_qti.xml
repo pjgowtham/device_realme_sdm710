@@ -155,6 +155,7 @@
                 <devicePort tagName="BT SCO Headset Mic" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source">
                 </devicePort>
                 <devicePort tagName="Telephony Rx" type="AUDIO_DEVICE_IN_TELEPHONY_RX" role="source">
+                </devicePort>
             </devicePorts>
             <routes>
                 <route type="mix" sink="Earpiece"
