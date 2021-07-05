@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Launched with pie
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 
@@ -146,8 +149,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/mixer_paths.xml
-
+    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1971/etc/mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \

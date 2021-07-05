@@ -54,6 +54,16 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
+
+on boot
+    #ifdef VENDOR_EDIT
+    #Fuchun.Liao@BSP.CHG.Basic 2019/09/30 modify for enable pmicwd
+    write /proc/pmicWd "1 254 7"
+    #endif /* VENDOR_EDIT */
+    #ifdef OPLUS_FEATURE_ACM
+    #Yuwei.Guan@BSP.Kernel.FS,2020/07/08, Add for acm
+     chmod 0666 /dev/acm
+    #endif /* OPLUS_FEATURE_ACM */
  
 on property:sys.boot_completed=1    
     #MoSiTing@ANDROID.PERFORMANCE, 2020/02/28, Add for boost boot time

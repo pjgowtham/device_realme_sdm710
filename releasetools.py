@@ -25,14 +25,6 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
-def FullOTA_Assertions(info):
-  AddTrustZoneAssertion(info, info.input_zip)
-  return
-
-def IncrementalOTA_Assertions(info):
-  AddTrustZoneAssertion(info, info.target_zip)
-  return
-
 def AddImage(info, basename, dest):
   path = "IMAGES/" + basename
   if path not in info.input_zip.namelist():
