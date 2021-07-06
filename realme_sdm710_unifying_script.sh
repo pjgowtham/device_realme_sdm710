@@ -9,5 +9,5 @@
 RMX_PEAFOWL=$(getprop "ro.product.model")
 
 # Fix device specific configs
-    mv /odm/$RMX_PEAFOWL/* /odm
-    rm /odm/RMX*
+    cp -r /vendor/odm/$RMX_PEAFOWL/* /vendor/odm
+    rm -r /vendor/odm/RMX*
