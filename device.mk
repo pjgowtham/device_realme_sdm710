@@ -150,12 +150,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/RMX1901/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1901/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/RMX1901/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1971/etc/mixer_paths.xml
+    $(LOCAL_PATH)/audio/RMX1921/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1921/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1921/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/RMX1851/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1851/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1851/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/RMX1971/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/RMX1971/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/RMX1971/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/RMX1971/etc/mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
@@ -211,8 +211,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl:64 \
-    android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
 # FM
@@ -381,8 +379,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.realme_sdm710.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 # RenderScript
 PRODUCT_PACKAGES += \
