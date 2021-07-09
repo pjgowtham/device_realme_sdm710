@@ -21,12 +21,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- The list of vendor package signatures that should also be considered
-    platform signatures, specifically for use on devices with a vendor partition. -->
-    <string-array name="config_vendorPlatformSignatures">
-        <item>308203ef308202d7a003020102020900e3258054350f9f87300d06092a864886f70d010105050030818d310b300906035504061302434e3112301006035504080c094775616e67446f6e673116301406035504070c0d5368656e5a68656e20566965773110300e060355040a0c07416e64726f69643110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f6964311c301a06092a864886f70d010901160d6f70706f406f70706f2e636f6d301e170d3138313132373036353430345a170d3436303431343036353430345a30818d310b300906035504061302434e3112301006035504080c094775616e67446f6e673116301406035504070c0d5368656e5a68656e20566965773110300e060355040a0c07416e64726f69643110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f6964311c301a06092a864886f70d010901160d6f70706f406f70706f2e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100a3076d6d4300b36bd274f72c96462ff5e600aae0dcead9929651966d79c281fd39b9a86810377fcbaff9069d47eb8a18f0585e3675bc6e8226dcea48b232d73fd8a2935b71beca7d2158abcd89ac2d3036e384974f5e617f8ed9d4dc5131b15c9f1d58af709df262e31f91c0b3f6ff4addea8796b7e5f485227adf7439307855a324175db223bbd8ba3d67b193e445c8ccfe41a818cb1fdf461c64fdecdaa94f462ccdaf772a2711f0213ce90b4e284080cc3a5ddd303e6e1bd30e7262bd806e7060b0a4a5744381118d4759fa0e78277085678cfe72e3ea2c0b56c3491f2c4999ad1c6cca42b0bf3377118798700e0aca5d0da7dd8648944bfef1b7ab72e2ff0203010001a350304e301d0603551d0e041604146aa620e9b2faf6c86f2497fbd74c350c6548d69b301f0603551d230418301680146aa620e9b2faf6c86f2497fbd74c350c6548d69b300c0603551d13040530030101ff300d06092a864886f70d0101050500038201010060dbb658e3386c5a37d3e0deca9f4dc75935bcaedacbe5aa280ab33d0fbfd06b1edf260b807dc9fc60f3011cb04af3bbdd9e53da1184cee0978320c5afbc5dc7006429d0b40392340afb9c32055eb2d642fe94f8f7cbab276f313fca521bee1d16250c6e149fc0ae0fa63a0f3d5bfc3d3b243759cacf04cfaf571af5da98e19a7f519a74081ad337d5ab5fd55c6b06570434edae4602f7a4b59ee4e10e7d2f52d893bb6caed46af5a271aac7b06e14df2bd1f0c4dd6d4c33adca000de1bb8e78875f3c801da0be63f1b52c59913fe6c24c91e3182bef40d6369f3ba8bb4df98587c81f36a110fe16a4cac9f5061b03a056e15fb3bee873754b9a7472da914e0d</item>
-    </string-array>
-
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
     Software implementation will be used if config_hardware_auto_brightness_available is not set --> 
     <bool name="config_automatic_brightness_available">true</bool>
@@ -69,19 +63,19 @@
     <integer name="config_screenBrightnessSettingMaximum">255</integer>
 
     <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
-    <integer name="config_autoBrightnessLightSensorRate">500</integer>
+    <integer name="config_autoBrightnessLightSensorRate">250</integer>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">536</integer>
+    <integer name="config_screenBrightnessSettingDefault">102</integer>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -125,36 +119,36 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>10.25254</item>    <!--  0 - 1  -->
-        <item>25.46192</item>    <!--  1 - 2  -->
-        <item>32.9231998399</item>    <!--  2 - 3  -->
-        <item>37.2564137654</item>    <!--  3 - 4  -->
-        <item>40.1587949692</item>    <!--  4 - 8  -->
-        <item>47.2941398812</item>    <!--  8 - 12  -->
-        <item>51.9914615527</item>    <!--  12 - 20  -->
-        <item>58.8613168724</item>    <!--  20 - 33  -->
-        <item>66.9820439119</item>    <!--  33 - 55  -->
-        <item>77.3881426005</item>    <!--  55 - 90  -->
-        <item>90.0748914709</item>    <!--  90 - 148  -->
-        <item>106.099757597</item>    <!--  148 - 245  -->
-        <item>126.784839595</item>    <!--  245 - 403  -->
-        <item>154.858709208</item>    <!--  403 - 665  -->
-        <item>190.979678749</item>    <!--  665 - 1097  -->
-        <item>236.557765614</item>    <!--  1097 - 1808  -->
-        <item>291.731912956</item>    <!--  1808 - 2981  -->
-        <item>375.646626771</item>    <!--  2981 - 5000  -->
-        <item>476.141854366</item>    <!--  5000 - 10000  -->
-        <item>610.667755086</item>    <!--  10000+  -->
+        <item>5.139055</item>       <!--  0 - 1  -->
+        <item>9.962018965</item>    <!--  1 - 2  -->
+        <item>18.34822964</item>    <!--  2 - 3  -->
+        <item>21.55068128</item>    <!--  3 - 4  -->
+        <item>24.0167788</item>     <!--  4 - 8  -->
+        <item>30.62162162</item>    <!--  8 - 12  -->
+        <item>35.09486396</item>    <!--  12 - 20  -->
+        <item>41.2249643</item>     <!--  20 - 33  -->
+        <item>47.6760716</item>     <!--  33 - 55  -->
+        <item>55.73002427</item>    <!--  55 - 90  -->
+        <item>66.24126116</item>    <!--  90 - 148  -->
+        <item>79.67614115</item>    <!--  148 - 245  -->
+        <item>98.04727274</item>    <!--  245 - 403  -->
+        <item>125.1221991</item>    <!--  403 - 665  -->
+        <item>161.6875093</item>    <!--  665 - 1097  -->
+        <item>208.4885553</item>    <!--  1097 - 1808  -->
+        <item>264.8221315</item>    <!--  1808 - 2981  -->
+        <item>327.8974352</item>    <!--  2981 - 5000  -->
+        <item>401.1676739</item>    <!--  5000 - 10000  -->
+        <item>494.0846144</item>    <!--  10000+  -->
     </array>
-    
-   <!-- An array describing the screen's backlight values corresponding to the brightness
-        values in the config_screenBrightnessNits array.
-        This array should be equal in size to config_screenBrightnessBacklight. -->
+
+    <!-- An array describing the screen's backlight values corresponding to the brightness
+         values in the config_screenBrightnessNits array.
+         This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
         <item>1</item>
         <item>255</item>
     </integer-array>
-    
+
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
          values in the config_screenBrightnessBacklight array.  On OLED displays these  values
          should be measured with an all white image while the display is in the fully on state.
@@ -165,60 +159,6 @@
         <item>2.0</item>
         <item>450.0</item>
     </array>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_dynamicHysteresisLuxLevels. The brightening threshold is calculated as
-         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-         the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisBrightLevels">
-        <item>2000</item>
-        <item>2000</item>
-        <item>1000</item>
-        <item>1000</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_dynamicHysteresisLuxLevels. The darkening threshold is calculated as
-         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-         the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisDarkLevels">
-        <item>800</item>
-        <item>800</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-         values by calculating the index to use for lookup and then setting the constraint value
-         to the corresponding value of the array. The new brightening hysteresis constraint value
-         is the n-th element of config_dynamicHysteresisBrightLevels, and the new darkening
-         hysteresis constraint value is the n-th element of config_dynamicHysteresisDarkLevels.
-         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-         condition                      calculated index
-         value < lux[0]                 0
-         lux[n] <= value < lux[n+1]     n+1
-         lux[MAX] <= value              MAX+1 -->
-    <integer-array name="config_dynamicHysteresisLuxLevels">
-        <item>2</item>
-        <item>10</item>
-        <item>30</item>
-        <item>100</item>
-        <item>800</item>
-        <item>2000</item>
-        <item>4000</item>
-    </integer-array>
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
@@ -242,20 +182,11 @@
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
     
+    <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>1</item>
-        <item>3</item>
-        <item>256</item>
-        <item>257</item>
-        <item>258</item>
-        <item>259</item>
-        <item>260</item>
-        <item>261</item>
-        <item>262</item>
-        <item>263</item>
-        <item>264</item>
-        <item>265</item>
+        <item>0</item> <!-- COLOR_MODE_NATURAL -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
  
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
