@@ -1,13 +1,38 @@
 # All unpinned blobs are from RMX1901EX_F01
 
 # ACDB - Audio
-odm/etc/acdbdata/Bluetooth_cal.acdb
-odm/etc/acdbdata/General_cal.acdb
-odm/etc/acdbdata/Global_cal.acdb
-odm/etc/acdbdata/Handset_cal.acdb
-odm/etc/acdbdata/Hdmi_cal.acdb
-odm/etc/acdbdata/Headset_cal.acdb
-odm/etc/acdbdata/Speaker_cal.acdb
+odm/RMX1921/etc/acdbdata/Bluetooth_cal.acdb
+odm/RMX1921/etc/acdbdata/General_cal.acdb
+odm/RMX1921/etc/acdbdata/Global_cal.acdb
+odm/RMX1921/etc/acdbdata/Handset_cal.acdb
+odm/RMX1921/etc/acdbdata/Hdmi_cal.acdb
+odm/RMX1921/etc/acdbdata/Headset_cal.acdb
+odm/RMX1921/etc/acdbdata/Speaker_cal.acdb
+
+odm/RMX1901/etc/acdbdata/Bluetooth_cal.acdb
+odm/RMX1901/etc/acdbdata/General_cal.acdb
+odm/RMX1901/etc/acdbdata/Global_cal.acdb
+odm/RMX1901/etc/acdbdata/Handset_cal.acdb
+odm/RMX1901/etc/acdbdata/Hdmi_cal.acdb
+odm/RMX1901/etc/acdbdata/Headset_cal.acdb
+odm/RMX1901/etc/acdbdata/Speaker_cal.acdb
+
+odm/RMX1971/etc/acdbdata/Bluetooth_cal.acdb
+odm/RMX1971/etc/acdbdata/General_cal.acdb
+odm/RMX1971/etc/acdbdata/Global_cal.acdb
+odm/RMX1971/etc/acdbdata/Handset_cal.acdb
+odm/RMX1971/etc/acdbdata/Hdmi_cal.acdb
+odm/RMX1971/etc/acdbdata/Headset_cal.acdb
+odm/RMX1971/etc/acdbdata/Speaker_cal.acdb
+
+odm/RMX1851/etc/acdbdata/Bluetooth_cal.acdb
+odm/RMX1851/etc/acdbdata/General_cal.acdb
+odm/RMX1851/etc/acdbdata/Global_cal.acdb
+odm/RMX1851/etc/acdbdata/Handset_cal.acdb
+odm/RMX1851/etc/acdbdata/Hdmi_cal.acdb
+odm/RMX1851/etc/acdbdata/Headset_cal.acdb
+odm/RMX1851/etc/acdbdata/Speaker_cal.acdb
+
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP
@@ -114,7 +139,10 @@ vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 
 # Audio - Firmware
-odm/firmware/tfa98xx.cnt
+odm/RMX1921/firmware/tfa98xx.cnt
+odm/RMX1901/firmware/tfa98xx.cnt
+odm/RMX1971/firmware/tfa98xx.cnt
+odm/RMX1851/firmware/tfa98xx.cnt
 
 # Bluetooth
 vendor/lib64/hw/audio.bluetooth_qti.default.so
@@ -674,7 +702,7 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 odm/lib/libormshalclient.so
 odm/lib64/libormshalclient.so
 
-# Fingerprint Firmware
+# Fingerprint Firmware - Goodix (RMX1901/RMX1921)
 odm/vendor/firmware/goodixfp.mdt
 odm/vendor/firmware/goodixfp.b00
 odm/vendor/firmware/goodixfp.b01
@@ -684,6 +712,17 @@ odm/vendor/firmware/goodixfp.b04
 odm/vendor/firmware/goodixfp.b05
 odm/vendor/firmware/goodixfp.b06
 odm/vendor/firmware/goodixfp.b07
+
+# Fingeprint firmware - FPC (RMX1851/RMX1971)
+odm/vendor/firmware/a_fp.mdt
+odm/vendor/firmware/a_fp.b00
+odm/vendor/firmware/a_fp.b01
+odm/vendor/firmware/a_fp.b02
+odm/vendor/firmware/a_fp.b03
+odm/vendor/firmware/a_fp.b04
+odm/vendor/firmware/a_fp.b05
+odm/vendor/firmware/a_fp.b06
+odm/vendor/firmware/a_fp.b07
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
