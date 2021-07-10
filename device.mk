@@ -371,8 +371,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.realme_sdm710.rc
 
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 # RenderScript
 PRODUCT_PACKAGES += \
