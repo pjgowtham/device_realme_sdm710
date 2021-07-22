@@ -46,7 +46,7 @@ public class PickupSensor implements SensorEventListener {
     public PickupSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = DozeUtils.getSensor(mSensorManager, "xiaomi.sensor.pickup");
+        mSensor = DozeUtils.getSensor(mSensorManager, "qti.sensor.amd");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
@@ -65,7 +65,7 @@ public class PickupSensor implements SensorEventListener {
 
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
-        if (event.values[0] == 1) {
+        if (event.values[0] == 2.0f) {
             DozeUtils.launchDozePulse(mContext);
         }
     }
