@@ -40,7 +40,10 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
         restore(DCModeSwitch.getFile(), enabled);
                }
-        org.evolution.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);
+        if (enabled) {
+        restore(GameModeSwitch.getFile(), enabled);
+               }      
+        org.evolution.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);     
         org.evolution.device.DeviceExtras.kcal.KCalSettings.restore(context);
     }
 
