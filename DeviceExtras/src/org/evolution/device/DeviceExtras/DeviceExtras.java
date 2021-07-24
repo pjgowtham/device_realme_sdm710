@@ -68,12 +68,14 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_HBM_SWITCH = "hbm";
-
+    public static final String KEY_GAME_SWITCH = "game_mode";
+    
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
     private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
+    private static TwoStatePreference mGameModeSwitch;
     private CustomSeekBarPreference mVibratorStrengthPreference;
     private ListPreference mBottomKeyPref;
     private ListPreference mMiddleKeyPref;
@@ -98,6 +100,12 @@ public class DeviceExtras extends PreferenceFragment
         mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
         mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
 
+        // Game Mode Toggle
+        mGameModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
+        mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
+        mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+        
         // DozeSettings Activity
         mDozeSettings = (Preference)findPreference(KEY_DOZE);
         mDozeSettings.setOnPreferenceClickListener(preference -> {

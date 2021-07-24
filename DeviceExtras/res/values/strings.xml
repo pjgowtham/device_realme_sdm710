@@ -26,7 +26,9 @@
     <string name="auto_hbm_summary">Enable peak luminance based on sunlight</string>
     <string name="auto_hbm_threshold_title"></string>
     <string name="auto_hbm_threshold_summary">threshold (lux)</string>
-
+    <string name="game_mode_title">Game mode</string>
+    <string name="game_mode_summary">Boost Touch Sampling Rate</string>
+    
     <!-- Doze -->
     <string name="ambient_display_title">Ambient display</string>
     <string name="ambient_display_enable_title">Ambient display</string>

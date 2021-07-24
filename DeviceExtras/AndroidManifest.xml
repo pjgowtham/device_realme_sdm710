@@ -91,6 +91,17 @@
             </intent-filter>
         </service>
 
+        <!-- Game-Mode tile -->
+        <service
+            android:name=".GameModeTileService"
+            android:icon="@drawable/ic_game_mode"
+            android:label="@string/game_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <!-- Auto HBM service -->
         <service
             android:name=".AutoHBMService"
