@@ -14,51 +14,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- The default usage of slider -->
-    <string name="config_defaultNotificationSliderUsage" translatable="false">6</string>
-
-    <!-- The default actions of slider when use for notification -->
-    <string-array name="config_defaultSliderActionsForNotification" translatable="false">
-        <item>10</item>
-        <item>12</item>
-        <item>13</item>
-    </string-array>
-
-    <!-- The default actions of slider when use for flashlight -->
-    <string-array name="config_defaultSliderActionsForFlashlight" translatable="false">
-        <item>21</item>
-        <item>20</item>
-        <item>22</item>
-    </string-array>
-
-    <!-- The default actions of slider when use for brightness -->
-    <string-array name="config_defaultSliderActionsForBrightness" translatable="false">
-        <item>31</item>
-        <item>30</item>
-        <item>32</item>
-    </string-array>
-
-    <!-- The default actions of slider when use for rotation -->
-    <string-array name="config_defaultSliderActionsForRotation" translatable="false">
-        <item>41</item>
-        <item>40</item>
-        <item>42</item>
-    </string-array>
-
-    <!-- The default actions of slider when use for ringer -->
-    <string-array name="config_defaultSliderActionsForRinger" translatable="false">
-        <item>52</item>
-        <item>51</item>
-        <item>50</item>
-    </string-array>
-
-    <!-- The default actions of slider when use for notification and ringer -->
-    <string-array name="config_defaultSliderActionsForNotificationRinger" translatable="false">
-        <item>65</item>
-        <item>64</item>
-        <item>63</item>
-    </string-array>
-
     <!-- Whether device supports 240Hz sample rate -->
     <bool name="config_deviceSupportsHighSampleRate">true</bool>
 </resources>

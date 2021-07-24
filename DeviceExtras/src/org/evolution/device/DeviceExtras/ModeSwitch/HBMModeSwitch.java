@@ -25,7 +25,7 @@ import androidx.preference.PreferenceManager;
 
 public class HBMModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
+    private static final String FILE = "/sys/kernel/oppo_display/hbm";
 
     public static String getFile() {
         if (FileUtils.fileWritable(FILE)) {
@@ -45,7 +45,7 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
-        FileUtils.writeValue(getFile(), enabled ? "5" : "0");
+        FileUtils.writeValue(getFile(), enabled ? "1" : "0");
         return true;
     }
 }
