@@ -1,11 +1,9 @@
-<!-- drawable/ic_dc_mode.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
     android:height="24dp"
+    android:width="24dp"
+    android:tint="?android:attr/colorControlNormal"
     android:viewportWidth="24"
-    android:viewportHeight="24"
-    android:tint="?android:attr/colorControlNormal">
-  <path
-      android:fillColor="#000"
-      android:pathData="M19,3H5C3.89,3 3,3.9 3,5v14c0,1.1 0.89,2 2,2h14c1.1,0 2,-0.9 2,-2V5C21,3.9 20.11,3 19,3zM19,19H5V7h14V19zM13.5,13c0,0.83 -0.67,1.5 -1.5,1.5s-1.5,-0.67 -1.5,-1.5c0,-0.83 0.67,-1.5 1.5,-1.5S13.5,12.17 13.5,13zM12,9c-2.73,0 -5.06,1.66 -6,4c0.94,2.34 3.27,4 6,4s5.06,-1.66 6,-4C17.06,10.66 14.73,9 12,9zM12,15.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5C14.5,14.38 13.38,15.5 12,15.5z"/>
+    android:viewportHeight="24">
+    <path android:fillColor="#000" android:pathData="M23.5,17L18.5,22L15,18.5L16.5,17L18.5,19L22,15.5L23.5,17M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M12,4.5C17,4.5 21.27,7.61 23,12C22.75,12.65 22.44,13.26 22.08,13.85C21.5,13.5 20.86,13.25 20.18,13.12L20.82,12C19.17,8.64 15.76,6.5 12,6.5C8.24,6.5 4.83,8.64 3.18,12C4.83,15.36 8.24,17.5 12,17.5L13.21,17.43C13.07,17.93 13,18.46 13,19V19.46L12,19.5C7,19.5 2.73,16.39 1,12C2.73,7.61 7,4.5 12,4.5Z" />
 </vector>
