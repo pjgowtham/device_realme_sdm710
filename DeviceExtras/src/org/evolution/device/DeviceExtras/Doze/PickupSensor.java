@@ -53,7 +53,7 @@ public class PickupSensor implements SensorEventListener {
         mContext = context;
         mPowerManager = mContext.getSystemService(PowerManager.class);
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = DozeUtils.getSensor(mSensorManager, "oneplus.sensor.op_motion_detect");
+        mSensor = DozeUtils.getSensor(mSensorManager, "qti.sensor.amd");
         mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
         mExecutorService = Executors.newSingleThreadExecutor();
     }
@@ -73,7 +73,7 @@ public class PickupSensor implements SensorEventListener {
 
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
-        if (event.values[0] == 1) {
+        if (event.values[0] == 2.0f) {
             if (DozeUtils.isPickUpSetToWake(mContext)) {
                 mWakeLock.acquire(WAKELOCK_TIMEOUT_MS);
                 mPowerManager.wakeUpWithProximityCheck(SystemClock.uptimeMillis(),

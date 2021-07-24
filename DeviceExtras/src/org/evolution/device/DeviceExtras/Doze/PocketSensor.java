@@ -46,7 +46,7 @@ public class PocketSensor implements SensorEventListener {
     public PocketSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = DozeUtils.getSensor(mSensorManager, "oneplus.sensor.pocket");
+        mSensor = DozeUtils.getSensor(mSensorManager, "qti.sensor.proximity_fake");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
