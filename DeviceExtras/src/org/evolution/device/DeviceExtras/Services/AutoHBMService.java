@@ -16,7 +16,7 @@ import android.os.PowerManager;
 import androidx.preference.PreferenceManager;
 
 public class AutoHBMService extends Service {
-    private static final String HBM_FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
+    private static final String HBM_FILE = "/sys/kernel/oppo_display/hbm";
 
     private static boolean mAutoHBMActive = false;
 

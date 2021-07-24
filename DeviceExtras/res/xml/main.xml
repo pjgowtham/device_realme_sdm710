@@ -14,41 +14,6 @@
 	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.device.DeviceExtras">
 
     <PreferenceCategory
-        android:key="slider"
-        android:title="@string/notification_slider_category_title">
-
-        <ListPreference
-            android:key="slider_usage"
-            android:icon="@drawable/ic_slider"
-            android:dialogTitle="@string/notification_slider_usage_title"
-            android:title="@string/notification_slider_usage_title"
-            android:entries="@array/notification_slider_usage_entries"
-            android:entryValues="@array/notification_slider_usage_entry_values"
-            android:summary="%s" />
-
-        <ListPreference
-            android:key="action_top_position"
-            android:icon="@drawable/ic_up"
-            android:dialogTitle="@string/notification_slider_selection_dialog_title"
-            android:title="@string/notification_slider_top_position"
-            android:summary="%s" />
-
-        <ListPreference
-            android:key="action_middle_position"
-            android:icon="@drawable/ic_middle"
-            android:dialogTitle="@string/notification_slider_selection_dialog_title"
-            android:title="@string/notification_slider_middle_position"
-            android:summary="%s" />
-
-        <ListPreference
-            android:key="action_bottom_position"
-            android:icon="@drawable/ic_down"
-            android:dialogTitle="@string/notification_slider_selection_dialog_title"
-            android:title="@string/notification_slider_bottom_position"
-            android:summary="%s" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="display"
         android:title="@string/display_title">
 
@@ -67,13 +32,6 @@
             android:icon="@drawable/ic_dc_mode"
             android:title="@string/dc_mode_title"
             android:summary="@string/dc_mode_summary" />
-
-        <SwitchPreference
-            android:key="fps_info"
-            android:icon="@drawable/ic_fps_overlay"
-            android:title="@string/fps_info_title"
-            android:summary="@string/fps_info_summary"
-            android:persistent="true" />
 
         <SwitchPreference
             android:key="hbm"
@@ -98,17 +56,6 @@
             android:icon="@drawable/ic_info_outline"
             android:summary="@string/hbm_mode_warning" 
             android:persistent="false" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="usb"
-        android:title="@string/usb_title">
-
-        <SwitchPreference
-            android:key="usb2_fast_charge"
-            android:icon="@drawable/ic_usb2_fc"
-            android:summary="@string/usb2_fc_summary"
-            android:title="@string/usb2_fc_title" />
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -40,16 +40,7 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
         restore(DCModeSwitch.getFile(), enabled);
                }
-        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_FPS_INFO, false);
-        if (enabled) {
-            context.startService(new Intent(context, FPSInfoService.class));
-               }
-        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_USB2_SWITCH, false);
-        if (enabled) {
-        restore(USB2FastChargeModeSwitch.getFile(), enabled);
-       }
-        DeviceExtras.restoreSliderStates(context);
-        org.evolution.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);
+        org.evolution.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);       
     }
 
     private void restore(String file, boolean enabled) {

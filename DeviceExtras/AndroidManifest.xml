@@ -24,8 +24,6 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="org.evolution.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
-    <protected-broadcast android:name="org.evolution.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -137,22 +135,6 @@
             </intent-filter>
         </service>
 
-        <!-- FPS info service -->
-        <service
-            android:name=".FPSInfoService"
-            android:exported="false" />
-
-        <!-- FPS tile -->
-        <service
-            android:name=".FPSTileService"
-            android:icon="@drawable/ic_fps_overlay"
-            android:label="@string/fps_info_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
-
         <!-- Log Tile -->
         <service
             android:name=".LogTile"
@@ -170,18 +152,6 @@
             android:name=".TTLTileService"
             android:icon="@drawable/ic_ttl"
             android:label="@string/ttl_tile_label"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <!-- USB 2.0 force FastCharge  Tile -->
-        <service
-            android:name=".USB2FastChargeTileService"
-            android:icon="@drawable/ic_usb2_fc"
-            android:label="@string/usb2_fc_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
