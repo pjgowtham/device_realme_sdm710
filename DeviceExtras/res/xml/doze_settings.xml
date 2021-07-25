@@ -52,5 +52,17 @@
             android:summary="@string/pocket_gesture_summary" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="gyroscope_sensor"
+        android:title="@string/gyroscope_sensor_title">
+
+        <SwitchPreference
+            android:key="gesture_gyro"
+            android:defaultValue="false"
+            android:title="@string/gyroscope_gesture_title"
+            android:summary="@string/gyroscope_gesture_summary" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

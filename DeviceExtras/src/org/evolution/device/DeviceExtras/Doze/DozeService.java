@@ -31,12 +31,14 @@ public class DozeService extends Service {
 
     private PickupSensor mPickupSensor;
     private PocketSensor mPocketSensor;
+    private GyroscopeSensor mGyroscopeSensor;
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mPickupSensor = new PickupSensor(this);
         mPocketSensor = new PocketSensor(this);
+        mGyroscopeSensor = new GyroscopeSensor(this);
 
         IntentFilter screenStateFilter = new IntentFilter();
         screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
@@ -57,6 +59,7 @@ public class DozeService extends Service {
         this.unregisterReceiver(mScreenStateReceiver);
         mPickupSensor.disable();
         mPocketSensor.disable();
+        mGyroscopeSensor.disable();
     }
 
     @Override
@@ -72,6 +75,12 @@ public class DozeService extends Service {
         if (DozeUtils.isPocketEnabled(this)) {
             mPocketSensor.disable();
         }
+        if (DozeUtils.isGyroscopeEnabled(this)) {
+            mGyroscopeSensor.enable();
+        }
+        if (DozeUtils.isGyroscopeDisabled(this)) {
+            mGyroscopeSensor.disable();
+        } 
     }
 
     private void onDisplayOff() {
@@ -81,6 +90,9 @@ public class DozeService extends Service {
         }
         if (DozeUtils.isPocketEnabled(this)) {
             mPocketSensor.enable();
+        }
+        if (DozeUtils.isGyroscopeEnabled(this)) {
+            mGyroscopeSensor.disable();
         }
     }
 

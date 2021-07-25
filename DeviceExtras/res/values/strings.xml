@@ -50,7 +50,10 @@
     <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
     <string name="proximity_sensor_title">Proximity sensor</string><string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
     <string name="switch_bar_off">Off</string>
-    <string name="switch_bar_on">On</string>	
+    <string name="switch_bar_on">On</string>
+    <string name="gyroscope_sensor_title">Gyroscope sensor</string>    
+    <string name="gyroscope_gesture_title">Gyroscope</string>
+    <string name="gyroscope_gesture_summary">Turn off screen on docking the phone</string>
 
     <!-- Log Tile -->
     <string name="quick_settings_log_tile_label">LogTile</string>

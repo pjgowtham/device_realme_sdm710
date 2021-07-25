@@ -19,7 +19,7 @@ public class SuShell {
 
     // WARNING: setting this to true will dump passwords to logcat
     // set to false for release
-    static final boolean DEBUG = false;
+    static final boolean DEBUG = true;
 
     private SuShell() {
     }

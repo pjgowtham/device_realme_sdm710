@@ -53,6 +53,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     private ListPreference mPickUpPreference;
     private SwitchPreference mPocketPreference;
+    private SwitchPreference mGyroscopePreference;
 
     private Handler mHandler = new Handler();
 
@@ -79,6 +80,8 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
                 findPreference(DozeUtils.CATEG_PICKUP_SENSOR);
         PreferenceCategory proximitySensorCategory = (PreferenceCategory) getPreferenceScreen().
                 findPreference(DozeUtils.CATEG_PROX_SENSOR);
+        PreferenceCategory gyroscopeSensorCategory = (PreferenceCategory) getPreferenceScreen().
+                findPreference(DozeUtils.CATEG_GYRO_SENSOR);        
 
         mPickUpPreference = (ListPreference) findPreference(DozeUtils.GESTURE_PICK_UP_KEY);
         mPickUpPreference.setEnabled(dozeEnabled);
@@ -88,12 +91,17 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         mPocketPreference.setEnabled(dozeEnabled);
         mPocketPreference.setOnPreferenceChangeListener(this);
 
+        mGyroscopePreference = (SwitchPreference) findPreference(DozeUtils.GESTURE_GYRO_KEY);
+        mGyroscopePreference.setEnabled(dozeEnabled);
+        mGyroscopePreference.setOnPreferenceChangeListener(this);
+        
         // Hide AOD if not supported and set all its dependents otherwise
         if (!DozeUtils.alwaysOnDisplayAvailable(getActivity())) {
             getPreferenceScreen().removePreference(mAlwaysOnDisplayPreference);
         } else {
             pickupSensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
             proximitySensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
+            gyroscopeSensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
         }
     }
 
@@ -153,6 +161,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
         mPickUpPreference.setEnabled(isChecked);
         mPocketPreference.setEnabled(isChecked);
+        mGyroscopePreference.setEnabled(isChecked);
     }
 
     @Override

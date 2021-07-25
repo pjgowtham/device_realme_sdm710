@@ -41,9 +41,11 @@ public final class DozeUtils {
 
     protected static final String CATEG_PICKUP_SENSOR = "pickup_sensor";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
+    protected static final String CATEG_GYRO_SENSOR = "gyroscope_sensor";
 
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up_type";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
+    protected static final String GESTURE_GYRO_KEY = "gesture_gyro";
 
     protected static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");
@@ -80,6 +82,12 @@ public final class DozeUtils {
         context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
                 new UserHandle(UserHandle.USER_CURRENT));
     }
+    
+    //protected static boolean isDozePulseLaunched(Context context) {
+    //    if (DEBUG) Log.d(TAG, "Doze pulse was launched");
+    //    return (context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
+    //            new UserHandle(UserHandle.USER_CURRENT)), 1) != 0;
+    //}
 
     protected static boolean enableAlwaysOn(Context context, boolean enable) {
         return Settings.Secure.putIntForUser(context.getContentResolver(),
@@ -99,6 +107,11 @@ public final class DozeUtils {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(gesture, false);
     }
+    
+    protected static boolean isGestureDisabled(Context context, String gesture) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(gesture, true);
+    }    
 
     protected static boolean isPickUpEnabled(Context context) {
         return !PreferenceManager.getDefaultSharedPreferences(context)
@@ -114,8 +127,16 @@ public final class DozeUtils {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
+    protected static boolean isGyroscopeEnabled(Context context) {
+        return isGestureEnabled(context, GESTURE_GYRO_KEY);
+    }
+
+    protected static boolean isGyroscopeDisabled(Context context) {
+        return isGestureDisabled(context, GESTURE_GYRO_KEY);
+    }
+    
     public static boolean areGesturesEnabled(Context context) {
-        return isPickUpEnabled(context) || isPocketEnabled(context);
+        return isPickUpEnabled(context) || isPocketEnabled(context) || isGyroscopeEnabled(context);
     }
 
     protected static Sensor getSensor(SensorManager sm, String type) {
