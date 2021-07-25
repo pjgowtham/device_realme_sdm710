@@ -28,14 +28,14 @@ import androidx.preference.PreferenceViewHolder;
 
 public class AutoHBMThresholdPreference extends CustomSeekBarPreference {
 
-    private static int mMinVal = 0;
-    private static int mMaxVal = 60000;
-    private static int mDefVal = 20000;
+    private static int mMinVal = 5000;
+    private static int mMaxVal = 20000;
+    private static int mDefVal = 5000;
 
     public AutoHBMThresholdPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        mInterval = 1000;
+        mInterval = 500;
         mShowSign = false;
         mUnits = "";
         mContinuousUpdates = false;
