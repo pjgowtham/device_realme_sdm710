@@ -20,6 +20,15 @@ public class AutoHBMService extends Service {
 
     private static boolean mAutoHBMActive = false;
 
+    protected static Sensor getSensor(SensorManager sm, String type) {
+        for (Sensor sensor : sm.getSensorList(Sensor.TYPE_ALL)) {
+            if (type.equals(sensor.getStringType())) {
+                return sensor;
+            }
+        }
+        return null;
+    }
+
     private SensorManager mSensorManager;
     Sensor mLightSensor;
 
@@ -27,7 +36,7 @@ public class AutoHBMService extends Service {
 
     public void activateLightSensorRead() {
         mSensorManager = (SensorManager) getApplicationContext().getSystemService(Context.SENSOR_SERVICE);
-        mLightSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        mLightSensor = getSensor(mSensorManager, "qti.sensor.wise_light");
         mSensorManager.registerListener(mSensorEventListener, mLightSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
@@ -39,7 +48,7 @@ public class AutoHBMService extends Service {
 
     private void enableHBM(boolean enable) {
         if (enable) {
-            FileUtils.writeValue(HBM_FILE, "5");
+            FileUtils.writeValue(HBM_FILE, "1");
         } else {
             FileUtils.writeValue(HBM_FILE, "0");
         }
@@ -56,7 +65,7 @@ public class AutoHBMService extends Service {
             KeyguardManager km =
                     (KeyguardManager) getSystemService(getApplicationContext().KEYGUARD_SERVICE);
             boolean keyguardShowing = km.inKeyguardRestrictedInputMode();
-            float threshold = Float.parseFloat(mSharedPrefs.getString(DeviceExtras.KEY_AUTO_HBM_THRESHOLD, "20000"));
+            float threshold = Float.parseFloat(mSharedPrefs.getString(DeviceExtras.KEY_AUTO_HBM_THRESHOLD, "5000"));
             if (lux > threshold) {
                 if ((!mAutoHBMActive | !isCurrentlyEnabled()) && !keyguardShowing) {
                     mAutoHBMActive = true;
