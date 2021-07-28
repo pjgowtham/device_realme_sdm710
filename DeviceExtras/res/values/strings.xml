@@ -46,8 +46,8 @@
     <string name="pick_up_gesture_title">Pick-up</string>
     <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
     <string name="pick_up_wake_gesture_summary">Wake device on pick-up</string>
-    <string name="pocket_gesture_title">Pocket</string>
-    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
+    <string name="pocket_gesture_title">Pocket Handler</string>
+    <string name="pocket_gesture_summary">Prevents accidental wakeups and pulse notifications on removal from pocket</string>
     <string name="proximity_sensor_title">Proximity sensor</string><string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
     <string name="switch_bar_off">Off</string>
     <string name="switch_bar_on">On</string>

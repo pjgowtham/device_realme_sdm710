@@ -22,8 +22,10 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
+import android.os.Handler;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -36,6 +38,7 @@ public class PocketSensor implements SensorEventListener {
 
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
 
+    private PowerManager mPowerManager;
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private Context mContext;
@@ -46,6 +49,7 @@ public class PocketSensor implements SensorEventListener {
     public PocketSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
+        mPowerManager = mContext.getSystemService(PowerManager.class);        
         mSensor = DozeUtils.getSensor(mSensorManager, "qti.sensor.proximity_fake");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
@@ -65,7 +69,11 @@ public class PocketSensor implements SensorEventListener {
 
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
-        if (event.values[0] == 0.0) {
+        if (event.values[0] == 0) {
+            mPowerManager.goToSleep(SystemClock.uptimeMillis());
+        }
+
+        if (event.values[0] == 5) {
             DozeUtils.launchDozePulse(mContext);
         }
     }
