@@ -57,6 +57,7 @@ public class PocketSensor implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
+        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[1]);
 
         long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
         if (delta < MIN_PULSE_INTERVAL_MS) {
@@ -65,7 +66,7 @@ public class PocketSensor implements SensorEventListener {
 
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
-        if (event.values[0] == 0.0) {
+        if (event.values[0] == 5.0f) {
             DozeUtils.launchDozePulse(mContext);
         }
     }
