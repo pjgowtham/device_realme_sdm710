@@ -28,6 +28,8 @@
     <string name="auto_hbm_threshold_summary">threshold (lux)</string>
     <string name="game_mode_title">Game mode</string>
     <string name="game_mode_summary">Boost Touch Sampling Rate</string>
+    <string name="eye_comfort_title">Eye comfort</string>
+    <string name="eye_comfort_summary">Eye comfort reduces blue light from the screen and prevents eye strain</string>
     
     <!-- Doze -->
     <string name="ambient_display_title">Ambient display</string>

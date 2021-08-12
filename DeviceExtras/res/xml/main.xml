@@ -52,6 +52,12 @@
             android:summary="@string/game_mode_summary" />
 
         <SwitchPreference
+            android:key="eye_comfort"
+            android:icon="@drawable/ic_eye_comfort"
+            android:title="@string/eye_comfort_title"
+            android:summary="@string/eye_comfort_summary" />
+
+        <SwitchPreference
             android:key="hbm"
             android:icon="@drawable/ic_hbm_mode"
             android:title="@string/hbm_mode_title"

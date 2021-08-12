@@ -102,6 +102,17 @@
             </intent-filter>
         </service>
 
+        <!-- Eye-Comfort tile -->
+        <service
+            android:name=".EyeComfortTileService"
+            android:icon="@drawable/ic_eye_comfort"
+            android:label="@string/eye_comfort_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <!-- Auto HBM service -->
         <service
             android:name=".AutoHBMService"

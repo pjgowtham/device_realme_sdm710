@@ -72,12 +72,14 @@ public class DeviceExtras extends PreferenceFragment
     public static final String KEY_KCAL = "kcal";
     public static final String CATEGORY_DISPLAY = "display";
     public static final String KEY_GAME_SWITCH = "game_mode";
+    public static final String KEY_EYE_COMFORT_SWITCH = "eye_comfort";
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
     private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
+    private static TwoStatePreference mEyeComfortSwitch;
     private CustomSeekBarPreference mVibratorStrengthPreference;
     private Preference mKcal;
     private ListPreference mBottomKeyPref;
@@ -108,7 +110,13 @@ public class DeviceExtras extends PreferenceFragment
         mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
         mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
         mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
-        
+
+        // Eye Comfort Toggle
+        mEyeComfortSwitch = (TwoStatePreference) findPreference(KEY_EYE_COMFORT_SWITCH);
+        mEyeComfortSwitch.setEnabled(EyeComfortSwitch.isSupported());
+        mEyeComfortSwitch.setChecked(EyeComfortSwitch.isCurrentlyEnabled(this.getContext()));
+        mEyeComfortSwitch.setOnPreferenceChangeListener(new EyeComfortSwitch());
+                
         // DozeSettings Activity
         mDozeSettings = (Preference)findPreference(KEY_DOZE);
         mDozeSettings.setOnPreferenceClickListener(preference -> {
