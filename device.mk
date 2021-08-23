@@ -355,21 +355,24 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.class_main.sh \
-    init.devicesetting.rc \
-    init.oppo.vendor.motor.rc \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.recovery.qcom.rc \
+
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
+PRODUCT_PACKAGES += \
+    init.oppo.vendor.motor.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    init.realme_sdm710.rc
+    init.realme_sdm710.rc \
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom

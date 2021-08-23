@@ -1,4 +1,0 @@
-on boot    
-    # Force enable OTG, DC dimming
-    write /sys/class/power_supply/usb/otg_switch 1
-    write /sys/kernel/oppo_display/dimlayer_bl_en 1
