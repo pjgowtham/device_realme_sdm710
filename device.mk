@@ -260,7 +260,9 @@ PRODUCT_COPY_FILES += \
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
 
 # Lights
 PRODUCT_PACKAGES += \
