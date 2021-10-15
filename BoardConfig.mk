@@ -38,13 +38,13 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1
-#TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_KERNEL_SOURCE := kernel/realme/sdm710
-#TARGET_KERNEL_CONFIG := RMX1921_defconfig
+
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_SOURCE := kernel/realme/sdm710
+TARGET_KERNEL_CONFIG := realme_sdm710_defconfig
 
 # Assertion
 TARGET_OTA_ASSERT_DEVICE := RMX1921,RMX1921EU,RMX1901,RMX1901CN,RMX1851,RMX1971,RMX1971CN
@@ -201,44 +201,3 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VNDK
 BOARD_VNDK_VERSION := current
-
-# Kernel modules
-KERNEL_MODULES_DIR := $(DEVICE_PATH)/kernel_modules
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(KERNEL_MODULES_DIR)/audio_adsp_loader.ko \
-    $(KERNEL_MODULES_DIR)/audio_pinctrl_wcd.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd9xxx.ko \
-    $(KERNEL_MODULES_DIR)/audio_ak4376.ko \
-    $(KERNEL_MODULES_DIR)/audio_platform.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd_core.ko \
-    $(KERNEL_MODULES_DIR)/audio_analog_cdc.ko \
-    $(KERNEL_MODULES_DIR)/audio_q6.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd_cpe.ko \
-    $(KERNEL_MODULES_DIR)/audio_apr.ko \
-    $(KERNEL_MODULES_DIR)/audio_q6_notifier.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd_spi.ko \
-    $(KERNEL_MODULES_DIR)/audio_cpe_lsm.ko \
-    $(KERNEL_MODULES_DIR)/audio_q6_pdr.ko \
-    $(KERNEL_MODULES_DIR)/audio_wglink.ko \
-    $(KERNEL_MODULES_DIR)/audio_digital_cdc.ko \
-    $(KERNEL_MODULES_DIR)/audio_stub.ko \
-    $(KERNEL_MODULES_DIR)/audio_wsa881x.ko \
-    $(KERNEL_MODULES_DIR)/audio_dspg_dbmdx.ko \
-    $(KERNEL_MODULES_DIR)/audio_swr_ctrl.ko \
-    $(KERNEL_MODULES_DIR)/llcc_perfmon.ko \
-    $(KERNEL_MODULES_DIR)/audio_hdmi.ko \
-    $(KERNEL_MODULES_DIR)/audio_swr.ko \
-    $(KERNEL_MODULES_DIR)/mpq-adapter.ko \
-    $(KERNEL_MODULES_DIR)/audio_machine_sdm710.ko \
-    $(KERNEL_MODULES_DIR)/audio_tfa98xx.ko \
-    $(KERNEL_MODULES_DIR)/mpq-dmx-hw-plugin.ko \
-    $(KERNEL_MODULES_DIR)/audio_mbhc.ko \
-    $(KERNEL_MODULES_DIR)/audio_tfa98xx-v6.ko \
-    $(KERNEL_MODULES_DIR)/qca_cld3_wlan.ko \
-    $(KERNEL_MODULES_DIR)/audio_msm_sdw.ko \
-    $(KERNEL_MODULES_DIR)/audio_usf.ko \
-    $(KERNEL_MODULES_DIR)/rdbg.ko \
-    $(KERNEL_MODULES_DIR)/audio_native.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd9335.ko \
-    $(KERNEL_MODULES_DIR)/audio_pinctrl_lpi.ko \
-    $(KERNEL_MODULES_DIR)/audio_wcd934x.ko
