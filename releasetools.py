@@ -43,8 +43,8 @@ def OTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_mounted("/odm"), unmount("/odm"));');
   info.script.Mount("/vendor")
   info.script.Mount("/odm")
-  info.script.Print("Running Unifying Script")
-  RunCustomScript(info, "realme_sdm710_unifying_script.sh", "")
+  info.script.Print("Running Unified Script")
+  RunCustomScript(info, "unified_script.sh", "")
   info.script.Print("Unmounting Vendor/ODM")
   info.script.Unmount("/vendor")
   info.script.Unmount("/odm")  

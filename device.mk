@@ -17,6 +17,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/realme/realme_sdm710/realme_sdm710-vendor.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
@@ -419,9 +422,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
-# Unifying script
+# Unified script
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/realme_sdm710_unifying_script.sh:install/bin/realme_sdm710_unifying_script.sh
+    $(LOCAL_PATH)/unified_script.sh:install/bin/unified_script.sh
 
 # USB
 PRODUCT_PACKAGES += \
