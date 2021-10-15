@@ -1,14 +1,4 @@
 <manifest version="1.0" type="device">
-    <!--Lineage FOD hal -->
-    <hal format="hidl">
-        <name>vendor.lineage.biometrics.fingerprint.inscreen</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFingerprintInscreen</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!--UICC secure element -->
    <hal format="hidl" override="true">
         <name>android.hardware.secure_element</name>

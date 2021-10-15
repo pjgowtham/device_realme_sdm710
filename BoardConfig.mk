@@ -87,8 +87,14 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    vendor/lineage/config/device_framework_matrix.xml
+
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+
+ODM_MANIFEST_SKUS += RMX1921EU
+ODM_MANIFEST_RMX1921EU_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1921EU.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_sdm710
@@ -100,18 +106,6 @@ TARGET_LMKD_STATS_LOG := true
 # NFC
 TARGET_USES_NQ_NFC := true
 BOARD_NFC_CHIPSET := pn544
-
-# ODM
-ODM_MANIFEST_SKUS += \
-    RMX1921 \
-    RMX1921EU \
-    RMX1901 \
-    RMX1901CN
-
-ODM_MANIFEST_RMX1921_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1921.xml
-ODM_MANIFEST_RMX1921EU_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1921EU.xml
-ODM_MANIFEST_RMX1901_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1901.xml
-ODM_MANIFEST_RMX1901CN_FILES := $(DEVICE_PATH)/odm_manifests/manifest_RMX1901.xml
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
