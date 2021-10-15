@@ -94,19 +94,15 @@ on boot && property:ro.boot.product.hardware.sku=RMX1921EU
     start vendor.nfc_hal_service
     
 # Enable motor service for RMX1901
-on boot && property:ro.boot.product.hardware.sku=RMX1901
-    start camera-motor-1-0
-
-# Enable motor service for RMX1901CN
-on boot && property:ro.boot.product.hardware.sku=RMX1901CN
+on boot && property:ro.product.model=RMX1901
     start camera-motor-1-0
 
 # Stop FOD service for RMX1851
-on boot && property:ro.boot.product.hardware.sku=RMX1851
+on boot && property:ro.product.model=RMX1851
     stop fingerprint-inscreen-1-0
     
 # Stop FOD service for RMX1971
-on boot && property:ro.boot.product.hardware.sku=RMX1971
+on boot && property:ro.product.model=RMX1971
     stop fingerprint-inscreen-1-0
 
 service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
