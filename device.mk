@@ -6,6 +6,7 @@
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Launched with pie
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
