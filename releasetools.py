@@ -60,6 +60,6 @@ def AddTrustZoneAssertion(info, input_zip):
   if m:
     versions = m.group(1).split('|')
     if len(versions) and '*' not in versions:
-      cmd = 'assert(realme_sdm710.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 10 based Realme UI build. Please upgrade firmware and retry!"););'
+      cmd = 'assert(realme_sdm710.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 11 based RealmeUI_2 build. Please upgrade firmware and retry!"););'
       info.script.AppendExtra(cmd)
   return
