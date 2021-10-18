@@ -16,6 +16,7 @@
 
 #include "Lights.h"
 
+#include <android-base/logging.h>
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
 
