@@ -19,6 +19,7 @@ cc_binary {
     name: "vendor.lineage.camera.motor@1.0-service.RMX1901",
     init_rc: ["vendor.lineage.camera.motor@1.0-service.RMX1901.rc"],
     device_specific: true,
+    vintf_fragments: ["vendor.lineage.camera.motor@1.0-service.RMX1901.xml"],
     srcs: ["service.cpp", "CameraMotor.cpp"],
     shared_libs: [
         "libbase",
