@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.1-impl
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -190,8 +190,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Snap
-mera2ndk_vendor \
-    Snap
 
 PRODUCT_PACKAGES += \
     RealmeCameraHelper \
@@ -202,8 +200,8 @@ PRODUCT_PACKAGES += \
     libsuspend
 
 # Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
+#PRODUCT_PACKAGES += \
+#    disable_configstore
     
 # Context Hub
 PRODUCT_PACKAGES += \
@@ -226,7 +224,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator@1.0-service \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
-    vendor.qti.hardware.display.mapper@4.0.vendor    
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -461,6 +460,10 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
+
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcutils-v29.so
 
 # Unified script
 PRODUCT_COPY_FILES += \
