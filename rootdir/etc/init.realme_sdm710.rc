@@ -103,12 +103,4 @@ on boot && property:ro.product.model=RMX1851
     
 # Stop FOD service for RMX1971
 on boot && property:ro.product.model=RMX1971
-    stop fingerprint-inscreen-1-0
-
-service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
-    class hal
-    user system
-    group system wakelock context_hub input
-    writepid /dev/cpuset/system-background/tasks
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10    
+    stop fingerprint-inscreen-1-0  
