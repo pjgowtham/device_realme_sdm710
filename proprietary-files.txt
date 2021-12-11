@@ -144,7 +144,7 @@ odm/RMX1901/firmware/tfa98xx.cnt
 odm/RMX1921/firmware/tfa98xx.cnt
 odm/RMX1971/firmware/tfa98xx.cnt
 
-# Audio Firmware from stock Q
+# Audio Firmware - from stock Q
 vendor/firmware/tfa98xx_19651.cnt
 vendor/firmware/tfa98xx_18041.cnt
 vendor/firmware/tfa98xx_18621.cnt
