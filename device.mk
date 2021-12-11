@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libstdc++.vendor \
     libgui_vendor \
+    libcamera2ndk_vendor \
     Snap
 
 PRODUCT_PACKAGES += \
