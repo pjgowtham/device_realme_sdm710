@@ -705,5 +705,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@1.0::IOplusRadio/oplus_slot1</fqname>
         <fqname>@1.0::IOplusRadio/oplus_slot2</fqname>
-    </hal>    
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.dsp</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDspService</name>
+            <instance>dspservice</instance>
+        </interface>
+        <fqname>@1.0::IDspService/dspservice</fqname>
+    </hal>      
 </manifest>
