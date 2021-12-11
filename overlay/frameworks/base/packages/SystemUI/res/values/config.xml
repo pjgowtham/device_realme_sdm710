@@ -30,8 +30,5 @@
     <bool name="doze_suspend_display_state_supported">true</bool>
     
     <!-- Override value to use for proximity sensor.  -->
-    <string name="proximity_sensor_type" translatable="false">qti.sensor.proximity_fake</string>
-    
-    <!-- Override value to use for proximity sensor as confirmation for proximity_sensor_type. -->
-    <string name="proximity_sensor_secondary_type" translatable="false">android.sensor.tp_proximity</string>    
+    <string name="proximity_sensor_type" translatable="false">android.sensor.tp_proximity</string> 
 </resources>

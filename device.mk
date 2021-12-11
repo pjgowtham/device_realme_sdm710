@@ -229,7 +229,8 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    DeviceExtras
+    DeviceExtras \
+    RealmeProximityHelper
 
 # DRM
 PRODUCT_PACKAGES += \
