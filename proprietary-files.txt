@@ -1,37 +1,13 @@
-# All unpinned blobs are from RMX1901EX_F01
+# All unpinned blobs are from RMX1921_F03
 
 # ACDB - Audio
-odm/RMX1921/etc/acdbdata/Bluetooth_cal.acdb
-odm/RMX1921/etc/acdbdata/General_cal.acdb
-odm/RMX1921/etc/acdbdata/Global_cal.acdb
-odm/RMX1921/etc/acdbdata/Handset_cal.acdb
-odm/RMX1921/etc/acdbdata/Hdmi_cal.acdb
-odm/RMX1921/etc/acdbdata/Headset_cal.acdb
-odm/RMX1921/etc/acdbdata/Speaker_cal.acdb
-
-odm/RMX1901/etc/acdbdata/Bluetooth_cal.acdb
-odm/RMX1901/etc/acdbdata/General_cal.acdb
-odm/RMX1901/etc/acdbdata/Global_cal.acdb
-odm/RMX1901/etc/acdbdata/Handset_cal.acdb
-odm/RMX1901/etc/acdbdata/Hdmi_cal.acdb
-odm/RMX1901/etc/acdbdata/Headset_cal.acdb
-odm/RMX1901/etc/acdbdata/Speaker_cal.acdb
-
-odm/RMX1971/etc/acdbdata/Bluetooth_cal.acdb
-odm/RMX1971/etc/acdbdata/General_cal.acdb
-odm/RMX1971/etc/acdbdata/Global_cal.acdb
-odm/RMX1971/etc/acdbdata/Handset_cal.acdb
-odm/RMX1971/etc/acdbdata/Hdmi_cal.acdb
-odm/RMX1971/etc/acdbdata/Headset_cal.acdb
-odm/RMX1971/etc/acdbdata/Speaker_cal.acdb
-
-odm/RMX1851/etc/acdbdata/Bluetooth_cal.acdb
-odm/RMX1851/etc/acdbdata/General_cal.acdb
-odm/RMX1851/etc/acdbdata/Global_cal.acdb
-odm/RMX1851/etc/acdbdata/Handset_cal.acdb
-odm/RMX1851/etc/acdbdata/Hdmi_cal.acdb
-odm/RMX1851/etc/acdbdata/Headset_cal.acdb
-odm/RMX1851/etc/acdbdata/Speaker_cal.acdb
+odm/etc/acdbdata/Bluetooth_cal.acdb
+odm/etc/acdbdata/General_cal.acdb
+odm/etc/acdbdata/Global_cal.acdb
+odm/etc/acdbdata/Handset_cal.acdb
+odm/etc/acdbdata/Hdmi_cal.acdb
+odm/etc/acdbdata/Headset_cal.acdb
+odm/etc/acdbdata/Speaker_cal.acdb
 
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
@@ -139,10 +115,10 @@ vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
 # Audio - Firmware
-odm/RMX1851/firmware/tfa98xx.cnt
-odm/RMX1901/firmware/tfa98xx.cnt
-odm/RMX1921/firmware/tfa98xx.cnt
-odm/RMX1971/firmware/tfa98xx.cnt
+#odm/RMX1851/firmware/tfa98xx.cnt
+#odm/RMX1901/firmware/tfa98xx.cnt
+#odm/RMX1921/firmware/tfa98xx.cnt
+#odm/RMX1971/firmware/tfa98xx.cnt
 
 # Audio Firmware - from stock Q
 vendor/firmware/tfa98xx_19651.cnt
@@ -160,12 +136,10 @@ vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
-vendor/lib/com.dsi.ant@1.0.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbtnv.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib/vendor.qti.hardware.btconfigstore@2.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -173,12 +147,10 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/btaudio_offload_if.so
-vendor/lib64/com.dsi.ant@1.0.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 
 # Bluetooth (aptX) - from crosshatch-user 11 RQ2A.210505.002 7246365 release-keys
 system_ext/lib64/libaptXHD_encoder.so
@@ -617,6 +589,7 @@ vendor/etc/qdcm_calib_data_rm19651samsung_ams641rw01_1080_2340_cmd_mode_dsi_pane
 # dpAP firmware
 vendor/firmware/dpAP_full.mbn
 vendor/firmware/dpAP_mini.mbn
+vendor/firmware/dpMSA.mbn
 
 # DPM
 framework/tcmclient.jar
@@ -727,15 +700,15 @@ odm/vendor/firmware/goodixfp.b07
 odm/vendor/firmware/goodixfp.mdt
 
 # Fingeprint firmware - FPC (RMX1851/RMX1971)
-odm/vendor/firmware/a_fp.b00
-odm/vendor/firmware/a_fp.b01
-odm/vendor/firmware/a_fp.b02
-odm/vendor/firmware/a_fp.b03
-odm/vendor/firmware/a_fp.b04
-odm/vendor/firmware/a_fp.b05
-odm/vendor/firmware/a_fp.b06
-odm/vendor/firmware/a_fp.b07
-odm/vendor/firmware/a_fp.mdt
+#odm/vendor/firmware/a_fp.b00
+#odm/vendor/firmware/a_fp.b01
+#odm/vendor/firmware/a_fp.b02
+#odm/vendor/firmware/a_fp.b03
+#odm/vendor/firmware/a_fp.b04
+#odm/vendor/firmware/a_fp.b05
+#odm/vendor/firmware/a_fp.b06
+#odm/vendor/firmware/a_fp.b07
+#odm/vendor/firmware/a_fp.mdt
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
