@@ -195,7 +195,9 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.qti.hardware.display.allocator@1.0-service \
     vendor.display.config@1.0.vendor \
-    vendor.display.config@2.0    
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor    
 
 # Doze
 PRODUCT_PACKAGES += \
