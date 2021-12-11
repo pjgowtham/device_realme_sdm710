@@ -180,11 +180,17 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64  \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    libstdc++.vendor \
-    libgui_vendor \
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
+    libgui_vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+
+PRODUCT_PACKAGES += \
+    Snap
+mera2ndk_vendor \
     Snap
 
 PRODUCT_PACKAGES += \
@@ -194,6 +200,10 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
     
 # Context Hub
 PRODUCT_PACKAGES += \
@@ -290,16 +300,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
-    libc2dcolorconvert \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+    libc2dcolorconvert
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -310,6 +311,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
@@ -340,8 +344,20 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/com.oppo.nfc_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/com.oppo.nfc_feature.xml
+
+# OMX
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
     
-# Perfd (dummy)
+# Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
     
@@ -362,15 +378,19 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
 
-# QTI
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti.vendor
-
-# Radio
+# QMI
 PRODUCT_PACKAGES += \
     libjson \
-    librmnetctl
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
+
+# RIL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    librmnetctl \
+    libxml2
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -459,17 +479,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:vendor/etc/excluded-input-devices.xml
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcutils-v29.so
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libwifi-hal-qcom \
     libwpa_client \
-    WifiOverlay \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
+    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
