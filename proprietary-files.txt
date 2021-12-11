@@ -121,10 +121,10 @@ vendor/lib64/soundfx/libshoebox.so
 #odm/RMX1971/firmware/tfa98xx.cnt
 
 # Audio Firmware - from stock Q
-vendor/firmware/tfa98xx_19651.cnt
-vendor/firmware/tfa98xx_18041.cnt
-vendor/firmware/tfa98xx_18621.cnt
-vendor/firmware/tfa98xx_19691.cnt
+vendor/firmware/tfa98xx_18041.cnt|4bcd4f62fcb69325e6ba684732de57a16187c3ab
+vendor/firmware/tfa98xx_18621.cnt|efa945feb957c32b144e2821f788cb7e48a74a52
+vendor/firmware/tfa98xx_19651.cnt|83a5910185291ce60a0f41dcfd6653fc532840af
+vendor/firmware/tfa98xx_19691.cnt|1521eae8038105b68808667f0e754f5f5d3df036
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -153,8 +153,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Bluetooth (aptX) - from crosshatch-user 11 RQ2A.210505.002 7246365 release-keys
-system_ext/lib64/libaptXHD_encoder.so
-system_ext/lib64/libaptX_encoder.so
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera-common
 odm/lib/libSNPE_G.so
@@ -851,10 +851,10 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # IMS - from  Nokia/Phoenix_00WW/PNX_sprout:11/RKQ1.200906.002/00WW_6_210:user/release-keys
--system_ext/priv-app/ims/ims.apk
-system_ext/framework/qcrilhook.jar
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|5d0fe3593ef98ebd307d50e0c1a3b4857b607935
+system_ext/framework/qcrilhook.jar|6cead102805109095cabe4bf932dec079d93314e
+-system_ext/priv-app/ims/ims.apk|d8e82158fe6b64db98a6add2df1f1ceab9a8b7bd
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|6675ecd23d1cd1425af6e214b90d700ea5ba1612
 
 # IMS
 odm/lib/vendor.oplus.hardware.ims@1.0.so
@@ -1391,7 +1391,11 @@ vendor/etc/sensors/sns_reg_config
 # Sensors
 odm/lib/oplus.sensors.ssc.so
 odm/lib64/oplus.sensors.ssc.so
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
+vendor/bin/sensors.qti
+vendor/etc/init/hw/init.oppo.sensor.rc
+vendor/etc/init/init.vendor.sensors.rc
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/libssc.so
@@ -1402,10 +1406,6 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
-vendor/bin/init.qcom.sensors.sh
-vendor/bin/sensors.qti
-vendor/etc/init/init.vendor.sensors.rc
-vendor/etc/init/hw/init.oppo.sensor.rc
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
