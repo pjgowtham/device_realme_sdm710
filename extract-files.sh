@@ -1,8 +1,10 @@
 #!/bin/bash
 #
-# Copyright (C) 2020-2021 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
+#
 
 set -e
 
@@ -22,68 +24,46 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-function blob_fixup() {
-    case "${1}" in
-        system_ext/etc/init/dpmd.rc)
-            sed -i "s/\/system\/product\/bin\//\/system\/system_ext\/bin\//g" "${2}"
-            ;;
-        system_ext/etc/permissions/com.qti.dpmframework.xml)
-            ;&
-        system_ext/etc/permissions/dpmapi.xml)
-            ;&
-        system_ext/etc/permissions/qcrilhook.xml)
-            ;&
-        system_ext/etc/permissions/telephonyservice.xml)
-            sed -i "s/\/product\/framework\//\/system_ext\/framework\//g" "${2}"
-            ;;
-        system_ext/etc/permissions/qti_libpermissions.xml)
-            sed -i "s/name=\"android.hidl.manager-V1.0-java/name=\"android.hidl.manager@1.0-java/g" "${2}"
-            ;;
-        system_ext/lib64/libdpmframework.so)
-            sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
-            ;;
-    esac
-}
-
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
-SECTION=
-KANG=
 
-while [ "$1" != "" ]; do
-    case "$1" in
-        -n | --no-cleanup )     CLEAN_VENDOR=false
-                                ;;
-        -k | --kang)            KANG="--kang"
-                                ;;
-        -s | --section )        shift
-                                SECTION="$1"
-                                CLEAN_VENDOR=false
-                                ;;
-        * )                     SRC="$1"
-                                ;;
+KANG=
+SECTION=
+
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -n | --no-cleanup )
+                CLEAN_VENDOR=false
+                ;;
+        -k | --kang )
+                KANG="--kang"
+                ;;
+        -s | --section )
+                SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        * )
+                SRC="${1}"
+                ;;
     esac
     shift
 done
 
 if [ -z "${SRC}" ]; then
-    SRC=adb
+    SRC="adb"
 fi
 
 function blob_fixup() {
     case "${1}" in
-
-    # Fix xml version
-    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml)
-        sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
-        ;;
-
+        vendor/lib/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${2}"
+            ;;
     esac
 }
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
