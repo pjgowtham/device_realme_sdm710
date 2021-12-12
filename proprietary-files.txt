@@ -246,6 +246,7 @@ vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
 vendor/lib64/qcom.camera.log.so
+vendor/lib/qcom.camera.log.so
 
 # Camera
 vendor/lib/camera/components/com.arcsoft.node.yuvhdr.so
@@ -1594,3 +1595,45 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+
+# Test
+vendor/etc/camera/M_Attribute_Gender_Age_1.0.model
+vendor/lib/libOccluDetect.so
+vendor/lib/libPolarrRender.so
+vendor/lib/libSCES.so
+vendor/lib/libcomprcapture.so
+vendor/lib/libfastcrc.so
+vendor/lib/libiu456_datapath_filt_lib.so
+vendor/lib/libiu456_datapath_processor.so
+#vendor/lib/libmm-omxcore.so
+vendor/lib/libnnp.so
+vendor/lib/libobcdepth_hal.so
+vendor/lib/libocam_common.so
+vendor/lib/libocam_snapshot_intf.so
+vendor/lib/libsdk_3d.so
+vendor/lib/libsdk_common.so
+vendor/lib/libsns_registry_skel.so
+vendor/lib/libst_personblur.so
+vendor/lib/libst_scb_dep1.so
+vendor/lib/libst_segmentation.so
+vendor/lib/libstface_fd_api.so
+vendor/lib/libstface_seg_ocl.so
+vendor/lib/libthread_blur.so
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
+vendor/lib64/lib3DSlender.so
+vendor/lib64/libcomprcapture.so
+#vendor/lib64/libmm-omxcore.so
+
+odm/etc/camera/oppo_camera_config.xml
+odm/etc/camera/singleblur/Charming.cng
+odm/etc/camera/singleblur/M_Verify_Faster_Common_wp.model
+odm/etc/camera/singleblur/doubleloss_large.model
+odm/etc/camera/singleblur/faceTpl0.rgb32
+odm/etc/camera/singleblur/faceTpl1.rgb32
+odm/etc/camera/singleblur/gasryuv.model
+odm/etc/camera/singleblur/merged_model
+odm/etc/camera/singleblur/merged_model_post
+odm/etc/camera/stereoParams.bin
+
+#vendor/lib/libmegface.so
+#vendor/lib/libmegface_meglive.so
